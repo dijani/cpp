@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/binary-code.png" />
+    <title>C++</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="logo" src="../images/c-logo.png">
+            <div id="txt-logo">Împreună vom învăța să programăm</div>
+        </a>
+    </header>
+    <div class="page-box">
+        <aside>
+            <ul>
+                <li><a href="l1.html">Introducere</a></li>
+                <li><a href="l2.html">Date</a></li>
+                <li><a class="activ" href="l3.html">Tipuri simple</a></li>
+                <li><a href="l4.html">Expresii</a></li>
+                <li><a href="l5.html">Operator de atribuire</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="top3"></div>
+            <a href="#top3"><img class="up" src="../images/up.png"></a>
+            <h3>Tipuri simple</h3>
+            <p>
+                În limbajul C++ sunt următoarele tipuri simple de date: <b>int</b>, <b>float</b>, <b>char</b>,
+                <b>bool</b>, <b>enum</b>, <b>void</b>.
+                Fiecare tip de date descrie data cu ajutorul a 2 caracteristici: <b>mulțimea de valori</b> ale
+                datei și <b>mulțimea de operații</b> ce pot fi efectuate asupra datei.
+                Pentru a studia fiecare dintre tipurile propuse alegeți butonul corespunzător.
+            </p>
+            <button id="i" onclick="tema_i()">INT</button>
+            <button id="f" onclick="tema_f()">FLOAT</button>
+            <button id="c" onclick="tema_c()">CHAR</button>
+            <button id="b" onclick="tema_b()">BOOL</button>
+            <button id="e" onclick="tema_e()">ENUM</button>
+            <button id="v" onclick="tema_v()">VOID</button>
+            <br><br>
+            <div class="tema" id="ti" hidden>
+                <div>
+                    Tipul de date <b>int</b> definește mărimile ce pot lua valorile întregi (pozitive și negative) din
+                    intervalul de la
+                    <b>−2.147.483.648</b> până la <b>2.147.483.647</b>, ocupând 4 octeți în memoria calculatorului.
+                    Intervalul acesta
+                    reprezintă <b>mulțimea de valori</b> ale tipului dat.
+                </div>
+                <div>
+                    <b>Mulțimea de operații</b> pentru tipul dat este formată din următoarele grupe de operații:
+                    <ul>
+                        <li>aritmetice: + (adunare), - (scăcere), * (înmulțire), / (câtul împărțirii), % (restul
+                            împărțirii)</li>
+                        <li>relaționale: < (mai mic),> (mai mare), == (egal), <= (mai mic sau egal),>= (mai mare sau
+                                    egal), != (neegal)</li>
+                    </ul>
+                </div>
+                <h5>Rețineți!</h5>
+                <div>
+                    Dacă asupra datelor de tip <b>int</b> vom aplica operațiile aritmetice rezultatul obținut va fi la
+                    fel de tipul <b>int</b>.
+                    Însă dacă vom aplica operațiile relaționale rezultatul deja va fi de tipul <b>bool</b>.
+                </div>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Se dă un număr din 2 cifre, de aflat suma cifrelor
+                            acestui număr.</i></b>
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>using namespace std;</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>int n,s;</li>
+                        <li>cout&#60&#60"Dati un numar din 2 cifre"&#60&#60endl;</li>
+                        <li>cin&#62&#62n;</li>
+                        <li>s=n/10+n%10;</li>
+                        <li>cout&#60&#60"Suma cifrelor="&#60&#60s;</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi:<br>
+                    <p>Dati un numar din 2 cifre</p>
+                    <p>23</p>
+                    <p>Suma cifrelor=5</p>
+                </div>
+
+                <h5>Sarcina:</h5>
+                <div>
+                    Încercați să realizați de sine statator un program ce va rezolva următoarea problemă:<br> Se dau 2
+                    numere întregi ce reprezintă laturile unui dreptunghi. Calculați aria dreptunghiului.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details>
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400" src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                    Mai multe probleme puteți găsi în 
+                    <a target="_blank" href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.14-16.
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1231373" width="1090" height="1195" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="Problema"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+            </div>
+            <div class="tema" id="tf" hidden>
+                <div>
+                    Tipul de date <b>float</b> definește mărimile ce pot lua valorile zecimale (pozitive și negative) din
+                    intervalul de la <b>−3.4E38</b> până la <b>3.4E38</b>, ocupând 4 octeți în memoria calculatorului.
+                    Intervalul acesta reprezintă <b>mulțimea de valori</b> ale tipului dat. Numerele zecimale folosesc
+                    punct zecemal pentru separarea părții întregi de la partea fracțională. La fel se utilizează factor
+                    scală (e/E) pentru a interpreta *10 în scrierea numerelor în format științific.
+                </div>
+                <div>
+                    <b>Mulțimea de operații</b> pentru tipul dat este formată din următoarele grupe de operații:
+                    <ul>
+                        <li>aritmetice: + (adunare), - (scăcere), * (înmulțire), / (împărțire)</li>
+                        <li>relaționale: < (mai mic),> (mai mare), == (egal), <= (mai mic sau egal),>= (mai mare sau
+                                    egal), != (neegal)</li>
+                    </ul>
+                </div>
+                <h5>Rețineți!</h5>
+                <div>
+                    Dacă asupra datelor de tip <b>float</b> vom aplica operațiile aritmetice rezultatul obținut va fi la
+                    fel de tipul <b>float</b>. Atenția deosebită trebuie acordată operației de împărțire. Dacă ambii operatori
+                    sunt de tipul int atunci rezultatul operației la fel va fi valoarea de tip int. Pentru obținerea împărțirii
+                    reale asupra 2 operatorii întregi trebuie de forțat aplicarea operației reale sau de modificat un operator
+                    din int în float (indicând cuvântul float sau prin *1.0).<br>
+                    La aplicarea operațiilor relaționale rezultatul va fi de tipul <b>bool</b>.
+                </div>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Se dau 2 numere întregi, de aflat media aritmetică a acestora.</i></b>
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>using namespace std;</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>int n1,n2;</li>
+                        <li>cout&#60&#60"Dati 2 numere"&#60&#60endl;</li>
+                        <li>cin&#62&#62n1&#62&#62n2;</li>
+                        <li>float m;</li>
+                        <li>m=float(n1+n2)/2;</li>
+                        <li>cout&#60&#60"Media numerelor="&#60&#60m;</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi:<br>
+                    <p>Dati 2 numere</p>
+                    <p>3</p>
+                    <p>4</p>
+                    <p>Media numerelor=3.5</p>
+                </div>
+
+                <h5>Sarcina:</h5>
+                <div>
+                    Încercați să realizați de sine statator un program ce va rezolva următoarea problemă:<br> Se dau 3
+                    numere ce reprezintă bazele unui trapez și înățlimea lui. Calculați aria trapezului.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details>
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400" src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                    Mai multe probleme puteți găsi în 
+                    <a target="_blank" href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.14-16.
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1231378" width="1090" height="670" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="Problema2"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+            </div>
+            <div class="tema" id="tc" hidden>
+                <div>
+                    Tipul de date <b>char</b> definește mărimile ce pot lua valorile caracteriale din tabelul 
+                    <a target="_blank" href="https://www.ascii-code.com/">ASCII</a>, ocupând 1 octet în memoria calculatorului.
+                    Tabelul ASCII conține 256 de valori numerotate de la 0..255 și reprezintă <b>mulțimea de valori</b> ale tipului dat. 
+                    Fiecare caracter este delimitat de apostrofuri(exemplu 'A'), fapt ce permite deosebirea valorilor acestui tip
+                    de la valorile altor tipuri. Operarea cu valorile acestui tip poate fi făcută direct prin indicarea poziției din
+                    tabelul ASCII.
+                </div>
+                <div>
+                    <b>Mulțimea de operații</b> pentru tipul dat este formată din următoarele:
+                    <ul>
+                        <li>relaționale: < (mai mic),> (mai mare), == (egal), <= (mai mic sau egal),>= (mai mare sau egal), != (neegal)</li>
+                    </ul>
+                </div>
+                <h5>Rețineți!</h5>
+                <div>
+                    Dacă operăm cu valorile de tip char la nivel de poziție al tabelului ASCII, dar pozițiile reprezintă numere întregi,
+                    atunci este permis să aplicăm operațiile aritmetice. Dacă după efectuarea operațiilor aritmetice dorim să accesăm 
+                    valorile de tip caracterial este nevoie de utilizat cuvântul char în calitate de convertor de valori.<br>
+                    La aplicarea operațiilor relaționale rezultatul va fi de tipul <b>bool</b>.
+                </div>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Se dă un caracter. Da aflat caracterul ce se află peste 3 poziții spre 
+                    dreapta, cât și poziția lui în tabelul ASCII.</i></b>
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>using namespace std;</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>char c1,c2;</li>
+                        <li>cout&#60&#60"Dati caracterul"&#60&#60endl;</li>
+                        <li>cin&#62&#62c1;</li>
+                        <li>c2=char(c1+4);</li>
+                        <li>cout&#60&#60"Caracterul gasit="&#60&#60c2&#60&#60endl;</li>
+                        <li>int p;</li>
+                        <li>p=int(c2);</li>
+                        <li>cout&#60&#60"Pozitia caracterului="&#60&#60p;</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi:<br>
+                    <p>Dati caracterul</p>
+                    <p>A</p>
+                    <p>Caracterul gasit=E</p>
+                    <p>Pozitia caracterului=69</p>
+                </div>
+
+                <h5>Sarcina:</h5>
+                <div>
+                    Încercați să realizați de sine statator un program ce va rezolva următoarea problemă:<br> Se dă
+                    un număr întreg. De afișat caracterul ce se află pe poziția dată în tabelul ASCII.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details>
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400" src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                    Mai multe probleme puteți găsi în 
+                    <a target="_blank" href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.14-16.
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1231393" width="1090" height="626" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="Problema3"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+            </div>
+            <div class="tema" id="tb" hidden>
+                <div>
+                    Tipul de date <b>bool</b> definește mărimile logice cu valorile: fals (0/false) și adevărat (1/true), ocupând 1 octet 
+                    în memoria calculatorului. Acestea 2 valori și reprezintă <b>mulțimea de valori</b> ale tipului dat. 
+                </div>
+                <div>
+                    <b>Mulțimea de operații</b> pentru tipul dat este formată din următoarele grupe de operații:
+                    <ul>
+                        <li><a target="_blank" href="http://informaticasalaoruandra.weebly.com/uploads/1/2/3/4/12348285/611403_orig.png">logice</a>: ! (not/nu), && (and/și), || (or/sau).</li>
+                        <li>relaționale: < (mai mic),> (mai mare), == (egal), <= (mai mic sau egal),>= (mai mare sau egal), != (neegal)</li>
+                    </ul>
+                </div>
+                <h5>Rețineți!</h5>
+                <div>
+                    Aplicând toate operațiile ale tipului de date <b>bool</b> obținem rezultate de tip <b>bool</b>. Mai mult ca atât
+                    aplicând operațiile relaționale asupra valorilor de celelalte tipuri rezultatul tot va fi de tipul <b>bool</b>. Deaceea
+                    datele de tip logic sunt utilizate în mare măsură pentru crearea expresiilor logice sau pur și simplu condițiilor.
+                </div>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Se dau 2 numere. Da aflat valoarea de adevar a următoarei afirmației:
+                    primul număr este mai mare decât al doilea.</i></b>
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>using namespace std;</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>int n1,n2;</li>
+                        <li>cout&#60&#60"Dati 2 numere"&#60&#60endl;</li>
+                        <li>cin&#62&#62n1&#62&#62n2;</li>
+                        <li>bool b;</li>
+                        <li>b=n1&#62n2;</li>
+                        <li>cout&#60&#60"n1>n2? "&#60&#60b&#60&#60endl;</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi:<br>
+                    <p>Dati 2 numere</p>
+                    <p>5</p>
+                    <p>6</p>
+                    <p>n1>n2? 0</p>
+                </div>
+
+                <h5>Sarcina:</h5>
+                <div>
+                    Încercați să realizați de sine statator un program ce va rezolva următoarea problemă:<br> Se dă
+                    un caracter. De afișat valoarea de adevar a următoarei afirmației: Caracterul introdus este o 
+                    literă mică alfabetului latin.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details>
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400" src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                    Mai multe probleme puteți găsi în 
+                    <a target="_blank" href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.14-16.
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1231443" width="1090" height="626" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="Problema4"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+            </div>
+            <div class="tema" id="te" hidden>
+                <div>
+                    Tipul de date <b>enum</b> este un tip definit de utilizator care descrie un șir de valori (la dorința utilizatorului)
+                    ce capătă numerele de ordine începând cu 0. Mulțimea valorilor din șirul descris și reprezintă <b>mulțimea de valori</b> 
+                    ale tipului dat. Există posibilitatea de a atașa numerele de ordine la dorința utilizatorului, însă lucrul acesta trebuie
+                    definit de la bun start în lista inițială.<br>
+                    <ul>
+                        <li>Sintaxa declarației tipului:</li>
+                        <li>enum numetip={id1, id2, ..., idn};</li>
+                        <li>Sintaxa declarației variabilei:</li>
+                        <li>numetip numevar;</li>
+                        <li>Sintaxa declarației comună (tip și var)</li>
+                        <li>enum numetip={id1, id2, ..., idn} numevar;</li>
+                        <li>Sintaxa declarației tipului cu stabilirea numerelor de ordine proprii:</li>
+                        <li>enum numetip={id1, id2=5, ..., idn};</li>
+                        <li>Numerele de ordine ce nu sunt indicate de către utilizator se calculează incrementând cea precedentă</li>
+                    </ul>
+                </div>
+                <div>
+                    <b>Mulțimea de operații</b> pentru tipul dat este formată din următoarele:
+                    <ul>
+                        <li>relaționale: < (mai mic),> (mai mare), == (egal), <= (mai mic sau egal),>= (mai mare sau egal), != (neegal)</li>
+                    </ul>
+                </div>
+                <h5>Rețineți!</h5>
+                <div>
+                    În expresii aritmetice datele de tip <b>enum</b> sunt tratate ca numere întregi (numerele lor de ordine din listă). 
+                    Conversia către int este implicită, dar conversia inversă către enum trebuie realizată de către utilizator.<br>
+                    Tipul enum este utilizat pentru a da mai multă claritatea programului, reprezentând niște codificări numerice.
+                </div>
+            </div>
+            <div class="tema" id="tv" hidden>
+                <div>
+                    Tipul de date <b>void</b> este un tip specific ce nu are valori și nu prevede operații asupra datelor. Astfel 
+                    <b>mulțimea de valori</b> și <b>mulțimea de operații</b> sunt mulțimile vide. Variabilele de tip void nu se declară.
+                </div>
+                <h5>Rețineți!</h5>
+                <div>
+                    Tipul void se utilizează în special pentru funcții și pointeri.
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>Proprietar Diacova Janna © 2021</div>
+    </footer>
+</body>
+</html>

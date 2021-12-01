@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/binary-code.png" />
+    <title>C++</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="logo" src="../images/c-logo.png">
+            <div id="txt-logo">Împreună vom învăța să programăm</div>
+        </a>
+    </header>
+    <div class="page-box">
+        <aside>
+            <ul>
+                <li><a href="l1.html">Introducere</a></li>
+                <li><a href="l2.html">Date</a></li>
+                <li><a href="l3.html">Tipuri simple</a></li>
+                <li><a href="l4.html">Expresii</a></li>
+                <li><a class="activ" href="l5.html">Operator de atribuire</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="top5"></div>
+            <a href="#top5"><img class="up" src="../images/up.png"></a>
+            <h3>Operator de atribuire</h3>
+            <div class="tema">
+                <div>
+                    Operator de atribuire presupune atasarea valorilor la variabile. Simbolul atribuirii este notat prin
+                    "=".<br>
+                    Sintaxa instrucțiunii este: <i>variabila=expresie;</i><br>
+                    Instrucțiunea dată se execută de la dreapta la stânga. În primul rând se evaluează expresia din
+                    partea
+                    dreaptă a instrucțiunii. Rezultatul evaluării fiind o valoare se memorizează în variabila din partea
+                    stângă a instrucțiunii. Cazul elementar al expresiei reprezintă o valoare sau pur și simplu factor.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li><i>a=5;</i></li>
+                    <li>Expresia din partea dreaptă este reprezentată printr-un factor ce are valoare 5.</li>
+                    <li>Valoarea 5 se inscrie în variabilă cu numele a</li>
+                </ul>
+                <ul>
+                    <li><i>b=(3+5)*2.5;</i></li>
+                    <li>Expresia din partea dreaptă reprezintă un termen ce cuprinde la randul său o expresie simplă.
+                    </li>
+                    <li>În primul rând se evaluează expresia după regulile de prioritate: 1. adunare din paranteze; 2.
+                        înmulțire.</li>
+                    <li>3+5=8; 8*2.5=20.</li>
+                    <li>Rezultatul final - valoarea 20 se memorizează în variabilă cu numele b.</li>
+                </ul>
+                <div>
+                    <h5>Atenție!</h5>
+                    Este posibilă o atribuire multiplă:<br>
+                    f=m=n=7;<br>
+                    Toate trei variabile f,m și n vor avea valoarea 7.
+                </div>
+                <h4>Operatorii de atribuire compusă: +=, -=, *=, /=, %=.</h4>
+                <div>
+                    Sintaxa instrucțiunii este: <i>variabila operatie=expresie;</i><br>
+                    Instrucțiunea dată este echivalentă cu <i>variabila =variabila operatie expresie;</i>
+                    <h5>Exemplu:</h5>
+                    Instrucțiunea <br>a=a+3; <br>este echivalentă cu <br>a+=3;
+                </div>
+                <h4>Operatorii de incrementare/decrementare: ++/--.</h4>
+                <div>
+                    Prin <b>incrementarea</b> unei variabile (a++) înțelegem mărirea valorii sale cu 1. <br>
+                    Această operație este echivalentă cu instrucțiunea de atribuire: a=a+1.<br>
+                    Prin <b>decrementarea</b> unei variabile (a--) înțelegem micșorarea valorii sale cu 1.<br>
+                    Această operație este echivalentă cu instrucțiunea de atribuire: a=a-1.<br>
+                </div>
+                <div>
+                    <h5>Atenție!</h5>
+                    Există 2 variații ale operatorilor de incrementare/decrementare: postefectuare (var op) și preefectuare (op var).
+                    Astfel putem întâlni postincrementare (a++) și preincrementare (++a), cât și postdecrementare (a--) și
+                    predecrementare (--a).<br>
+                    <h5>Atenție!</h5>
+                    <ul>
+                        <li><i>b=7; a=b++;</i></li>
+                        <li>Variabila a va lua valoarea lui b (a=7) după aceasta valoarea variabilei b se va mări cu 1 (b=8).</li>
+                        <li><i>b=7; a=++b;</i></li>
+                        <li>Variabila a va lua valoarea lui b mărită cu 1 (a=8 b=8).</li>
+                        <li><i>b=7; a=b--;</i></li>
+                        <li>Variabila a va lua valoarea lui b (a=7) după aceasta valoarea variabilei b se va micșora cu 1 (b=6).</li>
+                        <li><i>b=7; a=--b;</i></li>
+                        <li>Variabila a va lua valoarea lui b micșorată cu 1 (a=6 b=6).</li>
+                    </ul>
+                </div>
+                <h4>Exerciții:</h4>
+                <div>
+                    Determinați valorile variabilelor s și k după efectuarea instrucțiunilor propuse.
+                    <ul>
+                        <li>s=14; k=-3; d=s+1; s=d; k=2*s;</li>
+                        <li>s=0; k=30; d=k-5; k=2*d; s=k-100;</li>
+                        <li>s=5.8; k=-7.9; k=s; s=k;</li>
+                        <li>s=3; k=-9.99; k-=s;</li>
+                    </ul>
+                </div>
+                <div>
+                    <a target="_blank" href="https://world-it.ro/software/limbaje-de-programare/programe-rezolvate/programe-c-rezolvate">Aici</a> puteți analiza probleme rezolvate în C++.
+                    <b>Problemele</b> pentru antrenament puteți găsi <a target="_blank" href="https://infogenius.ro/probleme-elementele-de-baza-cpp/">aici</a>.
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>Proprietar Diacova Janna © 2021</div>
+    </footer>
+</body>
+
+</html>

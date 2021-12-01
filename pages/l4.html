@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/binary-code.png" />
+    <title>C++</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="logo" src="../images/c-logo.png">
+            <div id="txt-logo">Împreună vom învăța să programăm</div>
+        </a>
+    </header>
+    <div class="page-box">
+        <aside>
+            <ul>
+                <li><a href="l1.html">Introducere</a></li>
+                <li><a href="l2.html">Date</a></li>
+                <li><a href="l3.html">Tipuri simple</a></li>
+                <li><a class="activ" href="l4.html">Expresii</a></li>
+                <li><a href="l5.html">Operator de atribuire</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="top4"></div>
+            <a href="#top4"><img class="up" src="../images/up.png"></a>
+            <h3>Expresii</h3>
+            <div class="tema">
+                <div>
+                    <b>Expresia</b> reprezintă o formulă pentru calculul unei valori. Reaminim că putem întâlni valorile de diferite
+                    tipuri și ca rezultat putem deosebi diferite tipuri de expresii. <b>Tipul expresiei</b> derivă de tipul
+                    valorii rezultante sau pur și simplu de rezultatul expresiei. Cel mai des putem întâlni următoarele tipuri de 
+                    expresii: expresii aritmetice, expresii logice. Structura unei expresii este alcătuită din mai 
+                    multe elemente printre care sunt: <b>factor</b>, <b>termen</b> și <b>expresie simplă</b>. <br>
+                    <b>Factorul</b> poate fi o mărime fie constantă, fie variabilă, apelul unei 
+                    <a target="_blank" href="https://www.cplusplus.com/reference/cmath/">funcții din biblioteca cmath</a> sau negația unui factor.<br>
+                    Dacă factorii sunt uniți cu ajutorul unor operatori multiplicativi (&&, *, /, %) se obține un <b>termen</b>.<br>
+                    Dacă termenii sunt uniți cu ajutorul unor operatori aditivi (||, +, -) se obține o <b>expresie simplă</b>.<br>
+                    Dacă unim expresii simple cu ajutorul unor operatori relaționali (<, >, ==, <=, >=, !=) obținem o <b>expresie</b>.<br>
+                    În expresie putem întâlni mai mulți operatori deaceea trebuie să cunoaștem că ordinea efectuării operațiilor este
+                    dirijată de <a target="_blank" href="https://www.math.uaic.ro/~eduard/Anexa.%20Operatori%20utilizati%20in%20C++.pdf">prioritatea operatorilor</a>.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li><i>Operatori aritmetici</i></li>
+                    <li>11*3/2*2/3 va avea rezultatul 10</li>
+                    <li>x%2+(x+1)%2 va avea rezultatul 1 pentru orice valoare a lui x</li>
+                    <li>50-(100–300/2/(2+3)) va avea rezultatul -20</li>
+                </ul>
+                <ul>
+                    <li><i>Operatori logici și relaționali</i></li>
+                    <li>x%10+x/10%10==0 va avea rezultatul 1(adevarat/true) pentru valoarea lui x divizibilă cu 100</li>
+                    <li>(x<=8) && (x>5) va avea rezultatul 1(adevarat/true) pentru valoarea lui x ce aparține intervalului (5,8]</li>
+                    <li>(x<=2) && (x>9) va avea rezultatul 1(adevarat/true) pentru valoarea lui x ce nu aparține intervalului (2,9]</li>
+                    <li>x/100==0 && x>9 va avea rezultatul 1(adevarat/true) pentru valoarea lui x ce este alcătuită exact din 2 cifre</li>
+                </ul>
+                <h5>Rețineți!</h5>
+                <div>
+                    Toate expresiile trebuie notate în format liniar!
+                </div>
+                <h5>Exerciții:</h5>
+                <div>
+                    Transcrieți expresiile din format matematic în format liniar.
+                    <img width="60%" src="../images/ex1.png">
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1231713" width="1090" height="471" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="Expresii"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>Proprietar Diacova Janna © 2021</div>
+    </footer>
+</body>
+
+</html>
