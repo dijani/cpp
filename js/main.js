@@ -1,3 +1,6 @@
+function show(){
+    document.getElementById("s-menu").style.display="block";
+}
 function tema_i(){
     document.getElementById("tf").hidden=true;
     document.getElementById("tc").hidden=true;

@@ -15,16 +15,27 @@ header{
 }
 header a{
     text-decoration: none;
+    padding-left: 30px;
 }
 #logo{
     width: 40px;
-    float: left;
+    position: fixed;
+    left:3px ;
 }
 #txt-logo{
-    font-size: 24px;
+    font-size: 22px;
     font-weight: bold;
     padding: 6px;
     color: white;
+    float: left;
+    padding-left: 45px;
+}
+.menu{
+    color:#ece4ee ;
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    display:none ;
 }
 .page-box{
     padding-top: 40px;
@@ -79,7 +90,7 @@ footer{
 }
 .img-index{
     padding-top: 15px;
-    width: 180px;
+    width: 18%;
 }
 h3,h4,h5{
     margin: 10px 0px;
@@ -101,4 +112,46 @@ h3,h4,h5{
 .out p{
     background-color:#d5cfcf;
     margin: 0px;
+}
+@media (max-width: 768px){
+body{
+    font-size: 14px;
+}
+.menu{
+    display: block;
+    top: 7px;
+}
+#txt-logo{
+    font-size: 16px;
+    padding-left: 35px;
+    float: left;
+}
+#logo{
+    width: 30px;
+}
+header{
+    min-height: 30px;
+}
+.page-box{
+    padding-top: 30px;
+}
+aside{
+    display: none;
+    width: 100%;
+    height:min-content;
+    text-align: center;
+}
+main{
+    padding: 0px 6% 5px 10px;
+}
+.up{
+    width: 20px;
+    right: 5px;
+}
+.program{
+    width: 100%;
+}
+.tema iframe{
+    width: 85%;
+}
 }
