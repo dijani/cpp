@@ -5,6 +5,7 @@ body{
     font-family: 'Varela Round', sans-serif;
     font-size: 18px;
     background-color: #ece4ee;
+    box-sizing: border-box;
 }
 header{
     width: 100%;
@@ -12,6 +13,9 @@ header{
     background-color: #7e8896;
     position: fixed;
     z-index: 1;
+    font-size: 22px;
+    font-weight: bold;
+    padding-left: 20px;
 }
 header a{
     text-decoration: none;
@@ -23,23 +27,21 @@ header a{
     left:3px ;
 }
 #txt-logo{
-    font-size: 22px;
-    font-weight: bold;
-    padding: 6px;
     color: white;
-    float: left;
-    padding-left: 45px;
+    padding: 6px 0px 6px 25px;
+    position:fixed;
+    left: 20px;
 }
 .menu{
     color:#ece4ee ;
     position: fixed;
     right: 10px;
-    top: 10px;
+    top: 8px;
+    font-size: 15px;
     display:none ;
 }
 .page-box{
     padding-top: 40px;
-    /* padding-bottom: 20px; */
     min-height: 91vh;
 }
 aside{
@@ -64,7 +66,6 @@ aside ul{
 }
 main{
     padding: 0px 50px 0px 240px;
-    /* height: 100vh; */
 }
 footer{
     height: 20px;
@@ -119,23 +120,25 @@ body{
 }
 .menu{
     display: block;
-    top: 7px;
 }
 #txt-logo{
-    font-size: 16px;
-    padding-left: 35px;
-    float: left;
+    font-size: 14px;
+    left: 10px;
+    top:3px;
 }
 #logo{
-    width: 30px;
+    width: 28px;
 }
 header{
     min-height: 30px;
+    font-size: 15px;
+    padding-left: 8px;
 }
 .page-box{
     padding-top: 30px;
 }
 aside{
+    padding: 5px;
     display: none;
     width: 100%;
     height:min-content;
@@ -149,9 +152,15 @@ main{
     right: 5px;
 }
 .program{
-    width: 100%;
+    width: 95%;
+}
+.out{
+    width: 95%;
 }
 .tema iframe{
     width: 85%;
+}
+#ex{
+    width: 100%;
 }
 }
