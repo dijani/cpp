@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/binary-code.png" />
+    <title>C++</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="logo" src="../images/c-logo.png">
+            <div id="txt-logo">Împreună vom învăța să programăm</div>
+        </a>
+        <i class="fas fa-bars menu" onclick="show()"></i>
+    </header>
+    <div class="page-box">
+        <aside id="s-menu">
+            <ul>
+                <li><a href="l1.html">Introducere</a></li>
+                <li><a href="l2.html">Date</a></li>
+                <li><a href="l3.html">Tipuri simple</a></li>
+                <li><a href="l4.html">Expresii</a></li>
+                <li><a href="l5.html">Operator de atribuire</a></li>
+                <li><a class="activ" href="l6.html">Instrucțiuni de ramificare</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="top6"></div>
+            <a href="#top6"><img class="up" src="../images/up.png"></a>
+            <h3>Instrucțiuni de ramificare</h3>
+            <div class="tema">
+                <div>
+                    Instrucțiunile de ramificare în limbaje de programare servesc pentru dirijarea fluxului execuției
+                    programului. Algoritmii nu întotdeauna sunt de tip liniar. Există situații când pații necesari
+                    rezolvarii unei problemei să presupună selectarea unor acțiuni din lista acțiunilor posibile în
+                    funcție de diferite situații înconjurătoare, ceea ce impune execuția condiționată/selectivă sau pur
+                    și simplu ramificare.<br>
+                    În limbajul C++ există 2 instrucțiuni ce permit realizarea astfel de situații: If și <a
+                        href="#s">Switch</a>.
+                </div>
+                <h3>If</h3>
+                <div>
+                    Instrucțiunea If reprezintă o ramificare simplă. Operatorul dat verifică o condiție (expresie
+                    logică/booleană) și în funcție de justețea/falsitatea propune selectarea a 2 execuții diferite după
+                    necesitatea problemei.
+                </div>
+                <div>
+                    <h4>Sintaxa:</h4>
+                    <b>if</b> (condiție){<br>
+                    <i>//blocul acțiunilor ce se execută în cazul condiției adevărate</i><br>
+                    }<br>
+                    <b>else</b> {<br>
+                    <i>//blocul acțiunilor ce se execută în cazul condiției false</i><br>
+                    }
+                </div>
+                <h5>Atenție</h5>
+                <div>
+                    Ramura <i>else</i> este opțională și deaceea poate lipsi.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li><i>if (a>0) {a+=5;} else {a/=2;}</i></li>
+                    <li>Se evaluează condiția a>0 ceea ce corespunde afirmației că numărul a este pozitiv.</li>
+                    <li>Dacă valoarea numărului a satisface condiția fiind număr pozitiv se va efectua acțiunea din
+                        prima acoladă, adică valoare lui a se va mări cu 5.</li>
+                    <li>Dacă valoarea numărului a nu satisface condiția fiind un număr nepozitiv (nul sau negativ)
+                        se va efectua acțiunea din acolada după cuvântul else, adică valoarea lui a se va micșora de 2
+                        ori.</li>
+                </ul>
+                <ul>
+                    <li><i>if (a%2==0) {cout<<"Numărul este par";}</i>
+                    </li>
+                    <li>Se evaluează condiția a%2==0 ceea ce corespunde afirmației că restul împărțirii numărului a la 2
+                        este 0, adică numărul a se împarte la 2 fără rest.</li>
+                    <li>În cazul cînd valoarea variabilei a satisface această condiție de va realiza comanda din
+                        acolade, adică pe ecran se va afișa mesajul dintre apostrofuri.</li>
+                    <li>În lipsa ramurii else în cazul nesatisfacerii condiției date nu se va realiza nici o acțiune.
+                    </li>
+                </ul>
+                <h4>Forma scurtă operatorului If (operatorul ternar)</h4>
+                <div>
+                    <h5>Sintaxa:</h5>
+                    variabila=(condiție) ? (acțiunea_True) : (acțiunea_False);<br>
+                    corespunde sintaxei if complete:<br>
+                    if (condiție) {acțiunea_True} else {acțiunea_False}
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li><i>max = (n1 > n2) ? n1 : n2;</i></li>
+                    <li>Se evaluează condiția n1>n2, adică se compară valorile cu scopul aflarii celui mai mare.</li>
+                    <li>Dacă condiția este satisfăcută variabila max va obține ca rezultat valoarea n1 (prima după
+                        semnul ?)</li>
+                    <li>Dacă condiția nu este satisfăcută variabila max va obține ca rezultat valoarea n2 (valoarea după
+                        semnul :)</li>
+                </ul>
+                <h4>Exerciții:</h4>
+                <div>
+                    Formulați condiții:
+                    <ul>
+                        <li>a este mai mare decât 5</li>
+                        <li>b este diferit de 10</li>
+                        <li>c este mai mic decât 6 și mai mare decât 2</li>
+                        <li>diferența dintre a și b este un număr impar</li>
+                    </ul>
+                    Pentru variabilele propuse x=9, y=4, a=2 stabiliți valoarea lui a după execuția instrucțiunii.
+                    <ul>
+                        <li>if (x>0) a=0;</li>
+                        <li>if (!y<=0) a=5 else a=2;</li>
+                        <li>a=(x>y)? 10 : 20;</li>
+                    </ul>
+                </div>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Se dau numere reale a și b. Să se afișeze
+                            suma acestora dacă numerele sunt egale și diferența lor în caz contrar.</i></b>
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>using namespace std;</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>float a,b;</li>
+                        <li>cout&#60&#60"Dati 2 numere"&#60&#60endl;</li>
+                        <li>cin&#62&#62a&#62&#62b;</li>
+                        <li>if (a==b) cout&#60&#60"Suma numerelor="&#60&#60(a+b);</li>
+                        <li>else cout&#60&#60"Diferenta numerelor="&#60&#60(a-b);</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi:<br>
+                    Cazul 1:<br>
+                    <p>Dati 2 numere</p>
+                    <p>5</p>
+                    <p>5</p>
+                    <p>Suma numerelor=10</p>
+                    Cazul 2:<br>
+                    <p>Dati 2 numere</p>
+                    <p>3</p>
+                    <p>1</p>
+                    <p>Diferenta numerelor=2</p>
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1233209" width="1090" height="318" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="If"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+                <h5>Sarcina:</h5>
+                <div>
+                    Realizați program ce va realiza: Fiind date 2 numere reale a și b afișați b în cazul b-a>a-b și a-b
+                    în caz contrar.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details id="s">
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400"
+                            src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                    Mai multe probleme puteți găsi în
+                    <a target="_blank"
+                        href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.22-29.
+                </div>
+                <h3>Switch</h3>
+                <div>
+                    Instrucțiunea Switch reprezintă o ramificare compusă. Operatorul dat lucrează cu un selector
+                    valoarea
+                    căruia se compară la egalitate cu o listă de cazuri. Dacă se obține o egalitate adevărată se
+                    efectuează
+                    acțiunea indicată pentru cazul dat.
+                </div>
+                <div>
+                    <h4>Sintaxa:</h4>
+                    <b>switch</b> (expresie){<br>
+                    <b>case</b> v1: {acțiune; <b>break</b>;}
+                    <b>case</b> v2: {acțiune; <b>break</b>;}
+                    <b>case</b> v3: {acțiune; <b>break</b>;}
+                    ...
+                    <b>default</b>: {acțiune;}
+                    }
+                </div>
+                <h5>Atenție</h5>
+                <div>Cazul <b>default</b> joacă rol ramurii else in cazul operatorului If. Dacă nu se găsește nici o
+                    egalitate a valorii selectorului cu unul dintre cazurile propuse se fixează cazul neegalității sau
+                    caz alternativ ce interpretează imposibilitatea realizării selecției.
+                </div>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Se dau numere reale a și b și un caracter o ce indică o 
+                    operație aritmetică. Să se afișeze rezultatul operației indicate.</i></b>
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>using namespace std;</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>float a,b;</li>
+                        <li>char o;</li>
+                        <li>cout&#60&#60"Dati 2 numere"&#60&#60endl;</li>
+                        <li>cin&#62&#62a&#62&#62b;</li>
+                        <li>cout&#60&#60"Indicati operatia (+,-,*,/)"&#60&#60endl;</li>
+                        <li>cin&#62&#62o;</li>
+                        <li>switch (o){</li>
+                        <li>case '+' : cout&#60&#60"a+b="&#60&#60(a+b); break;</li>
+                        <li>case '-' : cout&#60&#60"a-b="&#60&#60(a-b); break;</li>
+                        <li>case '*' : cout&#60&#60"a*b="&#60&#60(a*b); break;</li>
+                        <li>case '/' : cout&#60&#60"a/b="&#60&#60(a/b); break;</li>
+                        <li>default: cout&#60&#60"Operatia nerecunoscuta!";}</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi:<br>
+                    <p>Dati 2 numere</p>
+                    <p>4.5</p>
+                    <p>6.2</p>
+                    <p>Indicati operatia (+,-,*,/)</p>
+                    <p>+</p>
+                    <p>a+b=10.7</p>
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1233210" width="1090" height="450" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="switch"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+                <h5>Sarcina:</h5>
+                <div>
+                    Realizați program ce va realiza: Fiind dat un numar (de la 1 pina la 7) afișați denumirea zilei săptămânii.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details id="s">
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400"
+                            src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                    Mai multe probleme puteți găsi în
+                    <a target="_blank"
+                        href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.22-29.
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>Proprietar Diacova Janna © 2021</div>
+    </footer>
+</body>
+</html>

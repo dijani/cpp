@@ -84,7 +84,7 @@ footer{
     bottom: 23px;
     right: 12px;
 }
-#top1, #top2, #top3, #top4, #top5 {
+#top1, #top2, #top3, #top4, #top5, #top6 {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -158,7 +158,7 @@ main{
     width: 95%;
 }
 .tema iframe{
-    width: 85%;
+    width: 100%;
 }
 #ex{
     width: 100%;
