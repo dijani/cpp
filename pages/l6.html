@@ -183,10 +183,27 @@
                     }
                 </div>
                 <h5>Atenție</h5>
-                <div>Cazul <b>default</b> joacă rol ramurii else in cazul operatorului If. Dacă nu se găsește nici o
+                <p>Cazul <b>default</b> joacă rol ramurii else in cazul operatorului If. Dacă nu se găsește nici o
                     egalitate a valorii selectorului cu unul dintre cazurile propuse se fixează cazul neegalității sau
                     caz alternativ ce interpretează imposibilitatea realizării selecției.
+                </p>
+                <p>
+                    Structura Switch permite gruparea unor cazuri pentru a fi realizată o acțiune comună. În așa 
+                    situație se indică un șir de cazuri cu constante și semnele ”:”. Acțiunea ce trebuie realizată se 
+                    scrie o singura dată după ultimul caz scris. 
+                </p>
+                <div>
+                    <h4>Sintaxa:</h4>
+                    <b>switch</b> (expresie){<br>
+                    <b>case</b> v1:<br>
+                    <b>case</b> v2:<br>
+                    ...<br>
+                    <b>case</b> vk: {acțiune; <b>break</b>;}<br>
+                    ...<br>
+                    <b>default</b>: {acțiune;}<br>
+                    }
                 </div>
+                <br>
                 <div>
                     Pentru exemplificare propunem o problemă: <b><i>Se dau numere reale a și b și un caracter o ce indică o 
                     operație aritmetică. Să se afișeze rezultatul operației indicate.</i></b>
