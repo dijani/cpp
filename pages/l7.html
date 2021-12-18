@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/binary-code.png" />
+    <title>C++</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="logo" src="../images/c-logo.png">
+            <div id="txt-logo">Împreună vom învăța să programăm</div>
+        </a>
+        <i class="fas fa-bars menu" onclick="show()"></i>
+    </header>
+    <div class="page-box">
+        <aside id="s-menu">
+            <ul>
+                <li><a href="l1.html">Introducere</a></li>
+                <li><a href="l2.html">Date</a></li>
+                <li><a href="l3.html">Tipuri simple</a></li>
+                <li><a href="l4.html">Expresii</a></li>
+                <li><a href="l5.html">Operator de atribuire</a></li>
+                <li><a href="l6.html">Instrucțiuni de ramificare</a></li>
+                <li><a class="activ" href="l7.html">Ciclu cu contor</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="top6"></div>
+            <a href="#top6"><img class="up" src="../images/up.png"></a>
+            <h3>Ciclu cu contor</h3>
+            <div class="tema">
+                <div>
+                    Instrucțiunea repetitivă sau ciclu realizează o execuția repetată a unei/unor acțiuni. În limbaje de
+                    programare sunt utilizate mai multe cicluri. Primul reprezentant este ciclu cu contor. În cazul acestui
+                    ciclu numărul de repetări este un număr fix și este cunoscut din timp. Ciclul dat este <b>FOR</b>. Ciclul
+                    dat indică execuția repetată a unor acțiuni pentru fiecare valoarea contorului din diapazonul specificat. 
+                    Parcurgerea valorilor poate fi atât în creștere, cât și în descreștere; atât pentru fiecare valoare a 
+                    contorului, cât și pentru pasul specificat (al doilea, al treilea, etc.).
+                </div>
+                <div>
+                    <h4>Sintaxa:</h4>
+                    <b>for</b> (contor=vi; contor operator vf; pas) {<i>//blocul acțiunilor ce se execută repetat</i>}
+                </div>
+                <h5>Atenție</h5>
+                <div>
+                    Operator este relațional: <, <=, >, >=, !=, ==.<br>
+                    Pas indică direcția de parcurgere a valorilor contorului: ascendentă (în creștere/incrementare) sau descendentă 
+                    (în descreștere/decrementare).
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li><i>for (i=1; i<=5; i++) {a=i*i; cout&#60&#60a&#60&#60' ';}</i></li>
+                    <li>Contorul <i>i</i> va lua valoarea inițială 1.</li>
+                    <li>Se verifică dacă valoarea contorului nu a ieșit din domeniul (i<=5), dacă condiția este adevărată - se 
+                        execută blocul din acolade și anume se calculează pătratul valorii lui i și după această se afișează pe ecran 
+                        valoarea calculată urmată de un spațiul, în caz contrar execuția ciclului se încheie și se trece la următoarea 
+                        instrucțiunea de după For.
+                    </li>
+                    <li>Corespunzător pasului indicat (i++) se facă incrementarea valorii contorului, adică mărirea lui cu o unitate 
+                        și se revine la verificarea valorii contorului descris în pasul precedent.
+                    </li>
+                </ul>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Se citește de la tastatură un număr N. Se cere afișarea următoarelor 10 valori.</i></b>
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>using namespace std;</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>int n;</li>
+                        <li>cout&#60&#60"Dati numarul n:"&#60&#60endl;</li>
+                        <li>cin&#62&#62n;</li>
+                        <li>for (int i=n+1; i<=n+10; i++) cout&#60&#60i&#60&#60' ';</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi:<br>
+                    Dati numarul n:<br>
+                    7<br>
+                    8 9 10 11 12 13 14 15 16 17
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>Pentru problema prezentată dacă dorim afișarea valorilor în descreștere facem următoarea modificare:</li>
+                    <li><i>for (int i=n+10; i>=n+1; i--) cout&#60&#60i&#60&#60' ';</i></li>
+                    <li>Pentru afișarea primelor 4 numere impare:</li>
+                    <li><i>for (int i=1; i<=7; i+=2) cout&#60&#60i&#60&#60' ';</i></li>
+                </ul>
+                <h5>Sarcina:</h5>
+                <div>
+                    Realizați program ce va realiza: Afișarea pe ecran a literelor alfabetului englez de la Z pînă la A.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details id="s">
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400"
+                            src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                    Mai multe probleme puteți găsi în
+                    <a target="_blank"
+                        href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.35-44.
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1236379" width="1090" height="276" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="For"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>Proprietar Diacova Janna © 2021</div>
+    </footer>
+</body>
+
+</html>
