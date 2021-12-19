@@ -84,7 +84,7 @@ footer{
     bottom: 23px;
     right: 12px;
 }
-#top1, #top2, #top3, #top4, #top5, #top6 {
+#top1, #top2, #top3, #top4, #top5, #top6, #top7, #top4io {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -113,6 +113,10 @@ h3,h4,h5{
 .out p{
     background-color:#d5cfcf;
     margin: 0px;
+}
+.img-ex{
+    width: 50%;
+    margin-bottom: 10px;
 }
 @media (max-width: 768px){
 body{
@@ -162,5 +166,8 @@ main{
 }
 #ex{
     width: 100%;
+}
+.img-ex{
+    width: 95%;
 }
 }

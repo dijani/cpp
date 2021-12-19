@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/binary-code.png" />
+    <title>C++</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="logo" src="../images/c-logo.png">
+            <div id="txt-logo">Împreună vom învăța să programăm</div>
+        </a>
+        <i class="fas fa-bars menu" onclick="show()"></i>
+    </header>
+    <div class="page-box">
+        <aside id="s-menu">
+            <ul>
+                <li><a href="l1.html">Introducere</a></li>
+                <li><a href="l2.html">Date</a></li>
+                <li><a href="l3.html">Tipuri simple</a></li>
+                <li><a href="l4.html">Expresii</a></li>
+                <li><a class="activ" href="l4io.html">Citire/Afisare</a></li>
+                <li><a href="l5.html">Operator de atribuire</a></li>
+                <li><a href="l6.html">Instrucțiuni de ramificare</a></li>
+                <li><a href="l7.html">Ciclu cu contor</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="top4io"></div>
+            <a href="#top4io"><img class="up" src="../images/up.png"></a>
+            <h3>Instrucțiunile de citire (CIN)/ afișare (COUT)</h3>
+            <div class="tema">
+                <div>
+                    Orice program ce realizează rezolvarea unei probleme are nevoie de comunicare cu utilizatorul. Acest
+                    lucru este efectuat cu ajutorul instrucțiunilor speciale de intrare/ ieșire (I/O): citirea datelor
+                    de la tastatură și afișarea rezultatelor pe ecran. Limbajul C++ la fel prevede utilizarea
+                    instrucțiunilor
+                    respective.<br>
+                    Pentru citirea datelor de la tastatură se utilizează comanda <b>CIN</b> (<b>C</b>onsole
+                    <b>IN</b>put).<br>
+                    Pentru afișarea datelor pe ecran se utilizează comanda <b>COUT</b> (<b>C</b>onsole <b>OUT</b>put).
+                </div>
+                <div>
+                    <h4>Sintaxa CIN:</h4>
+                    <i>cin>>variabila;</i>
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li><i>cin>>a;</i></li>
+                    <li>Valoarea întrodusă de la tastatură va fi memorată în variabila cu denumirea a</li>
+                </ul>
+                <div>
+                    Se permite citirea a mai multor valori, pentru fiecare se indică variabila respectivă.<br>
+                    <i>cin>>x1>>x2>>x3;</i><br>
+                    În așa caz fiecare variabilă se separă prin simboluri '>>'.
+                </div>
+                <h5>Rețineți!</h5>
+                <div>
+                    1. Valorile citite de la tastatură trebuie să corespundă după tip variabilelor indicate, altfel va
+                    apărea o eroare!<br>
+                    2. Variabilă utilizată la citire obligatoriu trebuie declarată!<br>
+                    3. Fiecare valoare întrodusă trebuie separată fie prin spațiul, fie prin Enter.
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1236507" width="1090" height="384" frameborder="0"
+                    allowfullscreen="allowfullscreen"
+                    allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="cin"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+                <div>
+                    <h4>Sintaxa COUT:</h4>
+                    <i>cout&#60&#60data&#60&#60endl;</i>
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li><i>cout&#60&#60a&#60&#60endl;</i></li>
+                    <li>Valoarea variabilei a va fi afișată pe ecran. După afișarea valorii se va face trecerea la
+                        rândul următor.</li>
+                </ul>
+                <p>
+                    1. În calitate de data poate fi prezenta orice constantă, orice variabilă, orice expresie valoarea
+                    căreia se cere să fie afișată.<br>
+                    2. Utilizarea manipulatorului <i>endl</i> este opțională (neobligatorie).
+                </p>
+                </ul>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li><i>cout&#60&#60"Introdu data";</i></li>
+                    <li>Se afișează pe ecran șir de caractere: Introdu data, fiind constanta caracterială</li>
+                    <li><i>cout&#60&#60 123;</i></li>
+                    <li>Se afișează pe ecran valoarea 123, fiind constantă întreagă</li>
+                    <li><i>cout&#60&#60(3*5);</i></li>
+                    <li>Se afișează pe ecran rezultatul expresiei 15, înainte de afișare se realizează calculul
+                        expresiei indicate</li>
+                </ul>
+                <h5>Atenție!</h5>
+                <div>
+                    Implicit toate afișările a valorilor se fac aliniate în partea stânga-sus.<br>
+                    Diverse probleme ne impun situații de afișare nestandarde ce țin de afișarea dictată la anumite
+                    poziții. Pentru a putea realiza acest lucru limbajul C++ ne oferă unele facilități.<br>
+                    Manipulatorul <i>setw(n)</i> specifică numărul de poziții rezervate pentru afișarea valorii ordinale,
+                    valoarea fiind aliniată în dreaptă acestei zone rezervate, fapt ce permite amplasarea dacă rămân
+                    pozițiilor libere în fața valorii.
+                </div>
+                <h5>Exemplu:</h5>
+                <img class="img-ex" src="../images/setw.png">
+                <div>
+                    Pentru afișarea valorilor de tip <i>float</i> apare necesitate de precizarea în afară de numărul de 
+                    poziții în general pentru afișarea valorii în întregime a numărului de poziții în special pentru 
+                    afișarea părții fracționale(zecimale/după virgulă).<br>
+                    Pentru acest lucru limbajul C++ prevede utilizarea unor funcții speciale de format: <b>fixed</b>, 
+                    <b>showpoint</b>, <b>setprecision(n)</b>. <br>
+                    <b>fixed</b> - forțează afișarea în forma zecimală a numărului<br>
+                    <b>showpoint</b> - forțează afișarea punctului zecimal ce va separa partea întreagă de l ace zecimală<br>
+                    <b>setprecision(n)</b> - n - indică numărul de cifre zecimale afișate.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li><i>cout&#60&#60fixed&#60&#60showpoint&#60&#60setprecision(2)&#60&#60 3.14159;</i></li>
+                    <li>Pe ecran se va afișa valoarea 3.14</li>
+                </ul>
+                <div>
+                    Mai multe informații despre formate de afișare puteți găsi în sursele suplimentare 
+                    <a target="_blanck" href="https://www.pbinfo.ro/articole/16018/citiri-si-scrieri-cu-format-in-cpp">PbInfo</a> 
+                    și <a target="_blanck" href="https://suleacosti.files.wordpress.com/2014/10/capitolul_12.pdf">CursSuplimentar</a>
+                </div>
+                <h5>Sarcina:</h5>
+                <div>
+                    Realizați program ce va realiza: Afișarea pe ecran a numărului 10 pe 5 poziții, literei 'A' pe 7 poziții 
+                    și numărului 4.23517 pe 6 pozitii cu 2 cifre după virgulă.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details id="s">
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400"
+                            src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>Proprietar Diacova Janna © 2021</div>
+    </footer>
+</body>
+
+</html>
