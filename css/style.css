@@ -84,6 +84,12 @@ footer{
     bottom: 23px;
     right: 12px;
 }
+.anulnou{
+    position: fixed;
+    top: -50px;
+    right: -90px;
+    width: 15%;
+}
 #top1, #top2, #top3, #top4, #top5, #top6, #top7, #top4io {
     position: absolute;
     top: 0px;
@@ -150,6 +156,12 @@ aside{
 }
 main{
     padding: 0px 6% 5px 10px;
+}
+.anulnou{
+    position: fixed;
+    top: -18px;
+    right: -35px;
+    width: 30%;
 }
 .up{
     width: 20px;
