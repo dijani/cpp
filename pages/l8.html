@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/binary-code.png" />
+    <title>C++</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="logo" src="../images/c-logo.png">
+            <div id="txt-logo">Împreună vom învăța să programăm</div>
+        </a>
+        <img class="anulnou" src="../images/an.png">
+        <i class="fas fa-bars menu" onclick="show()"></i>
+    </header>
+    <div class="page-box">
+        <aside id="s-menu">
+            <ul>
+                <li><a href="l1.html">Introducere</a></li>
+                <li><a href="l2.html">Date</a></li>
+                <li><a href="l3.html">Tipuri simple</a></li>
+                <li><a href="l4.html">Expresii</a></li>
+                <li><a href="l4io.html">Citire/Afisare</a></li>
+                <li><a href="l5.html">Operator de atribuire</a></li>
+                <li><a href="l6.html">Instrucțiuni de ramificare</a></li>
+                <li><a href="l7.html">Ciclu cu contor</a></li>
+                <li><a class="activ" href="l8.html">Ciclu cu condiție</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="top7"></div>
+            <a href="#top7"><img class="up" src="../images/up.png"></a>
+            <h3>Ciclu cu condiție</h3>
+            <div class="tema">
+                <div>
+                    Instrucțiunile repetitive, execuția căror este dirijată de o condiție se numesc cicluri cu condiție.
+                    Sunt cunoscute 2 cicluri cu condiție: ciclu cu precondiție (While) și ciclu cu postcondiție (Do-While).
+                    Execuția acestor cicluri este realizată numai și numai atunci când condiția are valoare true.<br>
+                    Diferența dintre While și Do-While constă în momentul verificării condiției pentru execuția acestora.
+                    În cazul ciclului While mai întâi se verifică condiția și dacă aceasta este satisfăcută se execută corpul 
+                    ciclului, după ce iarăși se revine la verificarea condiției. În cazul ciclului Do-While mai întâi se 
+                    execută corpul ciclului și apoi se verifică condiția. Dacă condiția este true corpul ciclului încă o dată 
+                    se execută s.a.m.d.<br>
+                    Ambele cicluri încetează execuția cand condiția devine falsă. Însă este important un moment: În cazul 
+                    ciclului While dacă condiția din start este falsă ciclul nu se va execută niciodată (0 ori). Pe când ciclul 
+                    Do-While datorind faptului că condiția se verifică după corpul ciclului se va executa minimum o singură 
+                    dată în cazul condiției false. 
+                </div>
+                <div>
+                    <h4>Sintaxa <b>While</b>:</h4>
+                    <b>while</b>(conditie) {<i>//corpul ciclului</i>}
+                </div><br>
+                <div>
+                    <h4>Sintaxa <b>DO-While</b>:</h4>
+                    <b>do</b> {<i>//corpul ciclului</i>} <b>while</b>(conditie);
+                </div><br>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>i=5; <i>while (i>=1) {cout&#60&#60i&#60&#60' ';i--;}</i></li>
+                    <li>Variabila i primește valoarea 5.</li>
+                    <li>La inceputul se verifică condiția 5>=1, este adevărată, deaceea se trece la execuția corpului ciclului.</li>
+                    <li>În corpul ciclului se afișează valoarea curentă a lui i, adică 5, după ce valoarea lui i este decrementată (micșorată cu 1), adică se obține 4.</li>
+                    <li>Se revine la condiția 4>=1, adevărată, din nou se execută ciclul.</li>
+                    <li>Ciclul se va finisa în momentul când valoarea lui i va deveni 0, condiția 0>=1 va deveni falsă și corpul nu se va executa.</li>
+                    <li>Efectul acestui ciclu este afișarea pe ecran a valorilor de la 5 până la 1, adică a 5 valori consecutive în descreștere.</li>
+                </ul>
+                Același rezultat poate fi obținut folosind și ciclul Do-While.
+                <ul>
+                    <li>i=5; <i>do {cout&#60&#60i&#60&#60' ';i--;} while (i>=1); </i></li>
+                    <li>Variabila i primește valoarea 5.</li>
+                    <li>În corpul ciclului se afișează valoarea curentă a lui i, adică 5, după ce valoarea lui i este decrementată (micșorată cu 1), adică se obține 4.</li>
+                    <li>Se verifică condiția 4>=1, este adevărată, deaceea se revine la execuția corpului ciclului.</li>
+                    <li>Ciclul se va finisa în momentul când valoarea lui i va deveni 0, condiția 0>=1 va deveni falsă și corpul nu se va executa.</li>
+                </ul>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Se citește de la tastatură un număr N. Se cere afișarea tablei de înmulțire la N.</i></b>
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>using namespace std;</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>int n,m=1;</li>
+                        <li>cout&#60&#60"Dati numarul n:"&#60&#60endl;</li>
+                        <li>cin&#62&#62n;</li>
+                        <li>while (m<=10){</li>
+                        <li>cout&#60&#60n&#60&#60"*"&#60&#60m&#60&#60"="&#60&#60(m*n)&#60&#60endl;</li>
+                        <li>m++;}</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi:<br>
+                    <p>Dati numarul n:</p>
+                    <p>4</p>
+                    <p>4*1=4</p>
+                    <p>4*2=8</p>
+                    <p>4*3=12</p>
+                    <p>4*4=16</p>
+                    <p>4*5=20</p>
+                    <p>4*6=24</p>
+                    <p>4*7=28</p>
+                    <p>4*8=32</p>
+                    <p>4*9=36</p>
+                    <p>4*10=40</p>
+                </div>
+                <h5>Sarcina:</h5>
+                <div>
+                    Elaborați un program ce va realiza: Citiți de la tastatură un șir de numere întregi. 
+                    Afișați pe ecran suma acestor numere. Introducerea valorilor se finisează cu tastarea valorii 0.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details id="s">
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400"
+                            src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                    Mai multe probleme puteți găsi în
+                    <a target="_blank"
+                        href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.35-44.
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1237252" width="1090" height="471" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="ciclu"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>Proprietar Diacova Janna © 2021</div>
+    </footer>
+</body>
+
+</html>
