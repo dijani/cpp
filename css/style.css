@@ -25,12 +25,14 @@ header a{
     width: 40px;
     position: fixed;
     left:3px ;
+    top: 0px;
 }
 #txt-logo{
     color: white;
     padding: 6px 0px 6px 25px;
     position:fixed;
     left: 20px;
+    top:0px;
 }
 .menu{
     color:#ece4ee ;
@@ -42,7 +44,7 @@ header a{
 }
 .page-box{
     padding-top: 40px;
-    min-height: 91vh;
+    min-height: 92vh;
 }
 aside{
     /* #dbe1f6 */
