@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
-body{
+
+body {
     /* #d5cfcf */
     margin: 0px;
     font-family: 'Varela Round', sans-serif;
@@ -7,7 +8,8 @@ body{
     background-color: #ece4ee;
     box-sizing: border-box;
 }
-header{
+
+header {
     width: 100%;
     min-height: 40px;
     background-color: #7e8896;
@@ -17,36 +19,50 @@ header{
     font-weight: bold;
     padding-left: 20px;
 }
-header a{
+
+header a {
     text-decoration: none;
     padding-left: 30px;
 }
-#logo{
+
+#logo {
     width: 40px;
     position: fixed;
-    left:3px ;
+    left: 3px;
     top: 0px;
 }
-#txt-logo{
+
+#txt-logo {
     color: white;
     padding: 6px 0px 6px 25px;
-    position:fixed;
+    position: fixed;
     left: 20px;
-    top:0px;
+    top: 0px;
 }
-.menu{
-    color:#ece4ee ;
+
+.an{
+    position: fixed;
+    width: 10%;
+    rotate: 25deg;
+    top: -25px;
+    right: -65px;
+}
+
+.menu {
+    color: #ece4ee;
     position: fixed;
     right: 10px;
     top: 8px;
     font-size: 15px;
-    display:none ;
+    display: none;
 }
-.page-box{
+
+.page-box {
     padding-top: 40px;
-    min-height: 92vh;
+    min-height: 91vh;
 }
-aside{
+
+aside {
     /* #dbe1f6 */
     padding: 15px;
     background-color: #becee9;
@@ -54,22 +70,27 @@ aside{
     height: 91vh;
     width: 150px;
 }
-aside a{
+
+aside a {
     text-decoration: none;
     color: #7e8896;
 }
-aside ul{
+
+aside ul {
     list-style-type: none;
     padding-left: 0px;
     margin: 0px;
 }
-.activ{
+
+.activ {
     font-weight: bold;
 }
-main{
+
+main {
     padding: 0px 50px 0px 240px;
 }
-footer{
+
+footer {
     height: 20px;
     background-color: #7e8896;
     color: white;
@@ -80,96 +101,137 @@ footer{
     margin-bottom: 0px;
     z-index: 1;
 }
-.up{
+
+.up {
     position: fixed;
     width: 30px;
     bottom: 23px;
     right: 12px;
 }
-#top1, #top2, #top3, #top4, #top5, #top6, #top7, #top4io {
+
+#top1,
+#top2,
+#top3,
+#top4,
+#top5,
+#top6,
+#top7,
+#top4io {
     position: absolute;
     top: 0px;
     left: 0px;
 }
-.img-index{
+
+.img-index {
     padding-top: 15px;
     width: 18%;
 }
-h3,h4,h5{
+
+h3,
+h4,
+h5 {
     margin: 10px 0px;
 }
-.tema{
+
+.tema {
     padding: 5px;
 }
-.tema ul{
+
+.tema ul {
     list-style-type: none;
     padding-left: 5px;
 }
-.program{
+
+.program {
     border: 1px solid #7e8896;
     width: 400px;
 }
-.out{
+
+.out {
     width: 400px;
 }
-.out p{
-    background-color:#d5cfcf;
+
+.out p {
+    background-color: #d5cfcf;
     margin: 0px;
 }
-.img-ex{
+
+.img-ex {
     width: 50%;
     margin-bottom: 10px;
 }
-@media (max-width: 768px){
-body{
-    font-size: 14px;
-}
-.menu{
-    display: block;
-}
-#txt-logo{
-    font-size: 14px;
-    left: 10px;
-    top:3px;
-}
-#logo{
-    width: 28px;
-}
-header{
-    min-height: 30px;
-    font-size: 15px;
-    padding-left: 8px;
-}
-.page-box{
-    padding-top: 30px;
-}
-aside{
-    padding: 5px;
-    display: none;
-    width: 100%;
-    height:min-content;
-    text-align: center;
-}
-main{
-    padding: 0px 6% 5px 10px;
-}
-.up{
-    width: 20px;
-    right: 5px;
-}
-.program{
-    width: 95%;
-}
-.out{
-    width: 95%;
-}
-.tema iframe{
-    width: 100%;
-}
-#ex{
-    width: 100%;
-}
-.img-ex{
-    width: 95%;
-}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    #txt-logo {
+        font-size: 14px;
+        left: 10px;
+        top: 3px;
+    }
+
+    #logo {
+        width: 28px;
+    }
+
+    header {
+        min-height: 30px;
+        font-size: 15px;
+        padding-left: 8px;
+    }
+
+    .an{
+        position: fixed;
+        width: 25%;
+        top: -15px;
+        right: -30px;
+    }
+
+    .page-box {
+        padding-top: 30px;
+        min-height: 94vh;
+    }
+
+    aside {
+        padding: 5px;
+        display: none;
+        width: 100%;
+        height: min-content;
+        text-align: center;
+    }
+
+    main {
+        padding: 0px 6% 5px 10px;
+    }
+
+    .up {
+        width: 20px;
+        right: 5px;
+    }
+
+    .program {
+        width: 95%;
+    }
+
+    .out {
+        width: 95%;
+    }
+
+    .tema iframe {
+        width: 100%;
+    }
+
+    #ex {
+        width: 100%;
+    }
+
+    .img-ex {
+        width: 95%;
+    }
 }
