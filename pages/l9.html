@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/binary-code.png" />
+    <title>C++</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="logo" src="../images/c-logo.png">
+            <div id="txt-logo">Împreună vom învăța să programăm</div>
+        </a>
+        <img class="an" src="../images/an.png">
+        <i class="fas fa-bars menu" onclick="show()"></i>
+    </header>
+    <div class="page-box">
+        <aside id="s-menu">
+            <ul>
+                <li><a href="l1.html">Introducere</a></li>
+                <li><a href="l2.html">Date</a></li>
+                <li><a href="l3.html">Tipuri simple</a></li>
+                <li><a href="l4.html">Expresii</a></li>
+                <li><a href="l4io.html">Citire/Afisare</a></li>
+                <li><a href="l5.html">Operator de atribuire</a></li>
+                <li><a href="l6.html">Instrucțiuni de ramificare</a></li>
+                <li><a href="l7.html">Ciclu cu contor</a></li>
+                <li><a href="l8.html">Ciclu cu condiție</a></li>
+                <li><a class="activ" href="l9.html">Tabele</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="top7"></div>
+            <a href="#top7"><img class="up" src="../images/up.png"></a>
+            <h3>Tabele</h3>
+            <div class="tema">
+                <div>
+                    În viața cotidiană cel mai des ne întâlnim cu situații în care apare necesitatea de prelucrare nu
+                    unei singure valori ci a mai multor valori ce reprezintă o colecție de date. În majoritatea
+                    cazurilor
+                    datele sunt omogene și finite la număr.<br>
+                    În așa cazuri utilizăm tipuri structurate de date și cel mai des acestea sunt <b>tabele</b>. Există
+                    mai multe variante de această structură: tabel liniar (vector, unidimensional), tabel dreptunghic
+                    (matrice,
+                    bidimensional), tabel n-dimensional.<br>
+                    Vom studia mai detaliat tabel liniar. Structura dată operează cu o colecție de date (mai multe
+                    valori) care
+                    sunt grupate sub un nume, fiecare valoare fiind indexată (are o poziție) după care poate fi ușor
+                    identificată
+                    și accesată după necesitate.
+                </div>
+                <img class="img-ex" src="../images/tabel1.png">
+                <div>
+                    <h4>Sintaxa declarației unui tabel liniar este:</h4>
+                    <b>tip_componenta</b> numele_variabilei [lungimea];
+                </div><br>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>int tabel[5];</li>
+                    <li>Este declarat un tabel liniar cu denumire <i>tabel</i> din 5 elemente, fiecare fiind număr
+                        întreg</li>
+                    <br>
+                    <li>float numere[17];</li>
+                    <li>Este declarat un tabel liniar cu denumire <i>numere</i> din 17 elemente, fiecare fiind număr
+                        real</li>
+                    <br>
+                    <li>char litere[26];</li>
+                    <li>Este declarat un tabel liniar cu denumire <i>litere</i> din 26 elemente, fiecare fiind un
+                        caracter</li>
+                </ul>
+                <div>
+                    <h4>Sintaxa declarației unui tabel dreptunghic este:</h4>
+                    <b>tip_componenta</b> numele_variabilei [nr_rânduri][nr_coloane];
+                </div><br>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>int energie[4][7];</li>
+                    <li>Este declarat un tabel dreptunghic cu denumire <i>energie</i> din 28 elemente (organizate în 4
+                        rânduri
+                        și 7 coloane), fiecare fiind număr întreg</li>
+                </ul>
+                <div>
+                    Structura poate fi completată cu valori în mai multe moduri.<br>
+                    Prima variantă reprezintă chiar completarea structurii cu valori în momentul declarării, ceea ce se
+                    numește
+                    declararea cu inițializarea.
+                </div>
+                <img class="img-ex"
+                    src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Array-Declaration-In-C.png">
+                <div>
+                    Varianta a două constă în accesarea directă după indice a componentei și înscrierea valorii
+                    necesare.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>int lumina[7];</li>
+                    <li>Fie am declarat un tabel unde vom stoca consumul energiei electrice în timp de o săptămână</li>
+                    <li>lumina[0] = 10; lumina[1] = 10; lumina[2] = 13; lumina[3] = 15; lumina[4] = 11; lumina[5] = 21;
+                        lumina[6] = 22;</li>
+                    <li>Pe rând am completat fiecare componentă al tabelului nostru</li>
+                </ul>
+                <div>
+                    Varianta a treia constă în citirea de la tastatură a valorilor dorite.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>int lumina[7];</li>
+                    <li>Fie același exemplu</li>
+                    <li>for (int i = 0; i < 7; i++) cin>> lumina[i];</li>
+                    <li>Am citit valorile de la tastatură și am completat cu ele tabelul nostru</li>
+                </ul>
+                <div>
+                    Mai sunt variantele de completarea cu valori din fișiere externe sau chiar generarea numerelor
+                    aleatorie pentru tabel.
+                </div>
+                <br>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Fie să cunoaște consumul energiei electrice într-o
+                            săptămână. Se cere
+                            calcularea și afișarea consumului săptămânal al energiei.</i></b>
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>using namespace std;</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>int lumina[7], consum = 0;</li>
+                        <li>cout&#60&#60"Introduceti 7 valori zilnice ale consumului de energie electrica:"&#60&#60endl;
+                        </li>
+                        <li>for (int i = 0; i < 7; i++) {</li>
+                        <li>cin&#62&#62lumina[i];</li>
+                        <li>consum += lumina[i];</li>
+                        <li>}</li>
+                        <li>cout&#60&#60"Consumul saptamanal = "&#60&#60consum&#60&#60endl;</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi:<br>
+                    <p>Introduceti 7 valori zilnice ale consumului de energie electrica:</p>
+                    <p>10 12 11 13 10 23 22</p>
+                    <p>Consumul saptamanal = 101</p>
+                </div>
+                <br>
+                <div>
+                    Asupra valorilor unui tabel se poate de aplicat mai mulți algoritmi, insă majoritatea prelucrărilor
+                    se bazează pe parcurgerea elementelor tabelului și realizarea unor manipulații asupra elementelor.
+                    Parcurgerea cel mai des presupune utilizarea cilclului for în interiorul căruie se fac deja sau
+                    verificări asupra fiecărul element, sau unele calcule/modificări, sau chiar transformări în cadrul
+                    tabelului la nivel de pozițiile elementelor.<br>
+                    Vom prezenta câteva situații:<br>
+                </div>
+                <div><i>Numărăm elementele ce satisfac o condiție</i>: fie numere pozitive</div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>int numere[10] = {2, -3, 0, -8, -7, 12, 44, -84, -5, 72}, num=0 ;</li>
+                    <li>for (int i = 0; i < 10; i++) </li>
+                    <li>if (numere[i] > 0) num++;</li>
+                    <li>Este declarat un tabel cu denumire numere din 10 numere întregi înițializând cu valorile concrete 
+                        și o variabilă pentru numărare numerelor pozitive ce este inițializată cu 0</li>
+                    <li>Ciclul for realizeaza parcurgerea tabelului prin fiecare indice</li>
+                    <li>În corpul ciclului for se utilizează instrucțiunea if pentru verificarea condiției cerute pentru 
+                        numărarea numerelor pozitive, astfel în condiția apare accesarea fiecărui element și compararea
+                        lui cu zero; la satisfacerea condiției date se realizează incrementarea valorii variabilei num
+                        ce va păstra numărul de elemente pozitive</li>
+                </ul>
+                <div><i>Modificăm elementele </i>: fie micșorăm cu 3</div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>int numere[10] = {2, -3, 0, -8, -7, 12, 44, -84, -5, 72};</li>
+                    <li>for (int i = 0; i < 10; i++) numere[i] -= 3;</li>
+                    <li>Avem același exemplu de tabel</li>
+                    <li>Ciclul for realizeaza parcurgerea tabelului prin fiecare indice, fiecare element este micșorat cu 3 (-3)</li>
+                </ul>
+                <div><i>Modificăm elementele ce satisfac unele condiții</i>: toate elementele negative se vor înlocui cu 0</div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>int numere[10] = {2, -3, 0, -8, -7, 12, 44, -84, -5, 72};</li>
+                    <li>for (int i = 0; i < 10; i++)</li>
+                    <li>if (numere[i] < 0 ) numere[i] = 0;</li>
+                    <li>Avem același exemplu de tabel</li>
+                    <li>Ciclul for realizeaza parcurgerea tabelului prin fiecare indice</li>
+                    <li>Instrucțiunea if permite selectarea elementelor negative care pe urmă sunt schimbate în zero folosind 
+                        instrucțiunea de atribuire</li>
+                </ul>
+                <div><i>Schimbarea cu poziții a unelor elemente</i>: primul și ultimul element se vor schimba cu poziții</div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>int numere[10] = {2, -3, 0, -8, -7, 12, 44, -84, -5, 72}, boxa;</li>
+                    <li>boxa = numere[9];</li>
+                    <li>numere[9] = numere[0];</li>
+                    <li>numere[0] = boxa;</li>
+                    <li>Avem același exemplu de tabel și o variabilă auxiliară boxa pentru operația de schimbare a 2 valori</li>
+                    <li>Lucru cu anumite elemente din tabel nu necesită utilizarea instrucțiunii ciclice (ciclul for lipsește)</li>
+                    <li>Avem 3 instrucțiuni de atribuire pentru interschimbarea valorilor, accentul se pune pe indicarea pozițiilor 
+                        elementelor ce trebuie să se interschimbe. Reamintim primul element se află pe poziția 0, ultimul pe poziția 
+                        n-1, unde n este lungimea tabelului.</li>
+                </ul>
+                <h5>Remarcă:</h5>
+                <div>
+                    Un compartiment aparte reprezintă <b><i>Algoritmi de sortare</i></b> a tabelelor. Pentru a face cunoștința cu 
+                    acestea va propun materiale suplimentare sub forma de resurse video 
+                    (<a href="https://www.youtube.com/playlist?list=PLcX11VWS1PdA4dSPip8-1JfKxFa32X53y">sortarea prin dansuri</a>) 
+                    sau resurse online pe <a href="https://www.pbinfo.ro/articole/5587/sortarea-tablourilor">site-uri</a> terțe.
+                    Vizualizarea sau compararea diferitor sortări se poate de privit în următoarea secvența 
+                    <a href="https://www.youtube.com/watch?v=ZZuD6iUe3Pc">video</a> .
+                </div>
+                <h5>Sarcina:</h5>
+                <div>
+                    Elaborați un program ce va realiza: Într-un tabel de numere întregi, lungimea căruia se citește de la tastatură, 
+                    cât și valorile acestuia de numărat de câte ori apare cifra 1.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details id="s">
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400"
+                            src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                    Mai multe probleme puteți găsi în
+                    <a target="_blank"
+                        href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.52-57,
+                    64-73.
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1330156" width="1090" height="276" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="Tabel"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>Proprietar Diacova Janna © 2021</div>
+    </footer>
+</body>
+
+</html>
