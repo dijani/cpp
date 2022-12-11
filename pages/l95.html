@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/binary-code.png" />
+    <title>C++</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="logo" src="../images/c-logo.png">
+            <div id="txt-logo">Împreună vom învăța să programăm</div>
+        </a>
+        <img class="an" src="../images/an.png">
+        <i class="fas fa-bars menu" onclick="show()"></i>
+    </header>
+    <div class="page-box">
+        <aside id="s-menu">
+            <ul>
+                <li><a href="l1.html">Introducere</a></li>
+                <li><a href="l2.html">Date</a></li>
+                <li><a href="l3.html">Tipuri simple</a></li>
+                <li><a href="l4.html">Expresii</a></li>
+                <li><a href="l4io.html">Citire/Afisare</a></li>
+                <li><a href="l5.html">Operator de atribuire</a></li>
+                <li><a href="l6.html">Instrucțiuni de ramificare</a></li>
+                <li><a href="l7.html">Ciclu cu contor</a></li>
+                <li><a href="l8.html">Ciclu cu condiție</a></li>
+                <li><a href="l9.html">Tabele</a></li>
+                <li><a href="l92.html">String</a></li>
+                <li><a href="l93.html">Structuri</a></li>
+                <li><a href="l94.html">Multimi</a></li>
+                <li><a class="activ" href="l95.html">Fisiere</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="top7"></div>
+            <a href="#top7"><img class="up" src="../images/up.png"></a>
+            <h3>Fișiere</h3>
+            <div class="tema">
+                <div>
+                    Deja cunoaștem că datele inițiale în programele noastre ajung prin așa numite flux-uri de intrare
+                    stream-uri, iar datele finale din programele noastre se extrag pe ecran la fel printr-un flux de
+                    ieșire. Anume pentru dirijarea cu fluxurile date noi ne folosim de operatorii <b>cin</b> - consola 
+                    input (tastatura) și <b>cout</b> - consola output (ecran). Ca să putem utiliza acești operatori
+                    obligatoriu se indică biblioteca <i>iostream</i> (Input Output Stream) ce răspunde de fluxurile date.<br>
+                    Pe lângă fluxurile standarte se pot fi folosite și fluxurile de fișiere. În acest scop se utilizează
+                    biblioteca <i>fstream</i> (File Stream). Acest lucru înseamnă că datele (colecții de date) sunt
+                    stocate în exteriorul mediilor de programare. După necesitate noi putem să ne adresăm la acestea 
+                    date sau pentru a aduce datele în program, sau pentru a extrage datele din program.<br>
+                </div>
+                <br>
+                <div>
+                    Fișiere reprezintă o structură de date prin intermediul căreia este organizată informația pe harddisk.
+                    Un fișier este o colecție de linii de text terminate printr-un caracter special <b>EOL</b> (End of
+                    Line - sfârșit de linie). Sfârșitul fișierului este specificat prin alt caracter special denumit 
+                    <b>EOF</b> (End of File - sfârșit de fișier).<br>
+                    <ul>
+                        <li>În lucrul cu fișiere sunt necesare 3 operații:</li>
+                        <li>- deschiderea fișierului (se declară o variabilă pentru un fișier extern)</li>
+                        <li>- citirea/scrierea datelor din/în fișier</li>
+                        <li>- închiderea fișierului</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Sintaxele operațiilor cu fișiere sunt:</h4>
+                    <ul>
+                        <li><b>#include&#60fstream&#62</b></li>
+                        <li><i>conectarea bibliotecii pentru lucrul cu fișiere</i></li>
+                        <br>
+                        <li><b>ifstream nume_fișier_in("denumirea_fișierului_1");</b></li>
+                        <li><i>se deschide fișierul extern cu denumirea_fișierului_1 pentru operația de citire prin intermediul 
+                            variabilei nume_fișier_in</i></li>
+                        <br>
+                        <li><b>ofstream nume_fișier_out("denumirea_fișierului_2");</b></li>
+                        <li><i>se deschide fișierul extern cu denumirea_fișierului_2 pentru operația de înscriere prin intermediul 
+                            variabilei nume_fișier_out</i></li>
+                        <br>
+                        <li><b>nume_fișier_in>>variabila;</b></li>
+                        <li><i>se citește valoarea din fișierul prin intermediul nume_fișier_in și se înscrie în variabilă</i></li>
+                        <br>
+                        <li><b>nume_fișier_out&#60&#60variabila;</b></li>
+                        <li><i>se înscrie valoarea din variabilă în fișierul prin intermediul nume_fișier_out</i></li>
+                        <br>
+                        <li><b>nume_fișier.close();</b></li>
+                        <li><i>se închide fișierul - nume_fișier</i></li>
+                    </ul>
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>ifstream in("date.in");</li>
+                    <li>in>>a;</li>
+                    <li>in.close();</li>
+                    <br>
+                    <li>se deschide pentru citire fișierul extern cu denumirea date.in prin intermediul variabilei in</li>
+                    <li>din fișierul in valoarea se citește și se înscrie în variabila a</li>
+                    <li>fișierul in se închide</li>
+                </ul>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>În fișierul date.in sunt stocate 2 numere întregi (10 15). 
+                    Se cere de calculat suma acestor numere și de înscris în fișierul date.out.</i></b>
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>#include &#60fstream&#62</li>
+                        <li>using namespace std;</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>ifstream in("date.in");</li>
+                        <li>int a,b;</li>
+                        <li>in&#62&#62a&#62&#62b;</li>
+                        <li>in.close();</li>
+                        <li>ofstream out("date.out");</li>
+                        <li>out&#60&#60(a+b);</li>
+                        <li>out.close();</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi stocat în fișiere:<br>
+                    <p>date.in : 10 15</p>
+                    <p>date.out : 25</p>
+                </div>
+                <br>
+                <h5>Remarcă</h5>
+                <div>
+                    La deschiderea fișierelor se indică numai denumirea fișierelor externe ce se află în același director 
+                    cu fișierul-sursă *.cpp. În cazul când fișierele cu date se află în alte directorii se indică calea 
+                    completă către fișierul cu date.
+                </div>
+                <br>
+                <h5>Sarcina:</h5>
+                <div>
+                    Elaborați un program ce va realiza: Din fișierul note.txt se citesc cele 4 note obținute de un elev la 
+                    informatică pe parcursul unui semestru și nota de la teza. Scrieți un algoritm care calculează media lui 
+                    și să o scrie într-un fișier numit media.txt.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului, însă problema nu va funcționa 
+                    complet fară fișiere externe. Sarcina dată este recomnadată să fie realizată la un compilator offline 
+                    cu crearea fișierelor indicate în problemă.
+                    <details id="s">
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400"
+                            src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1330561" width="1090" height="276" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="Fisiere"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>Proprietar Diacova Janna © 2021</div>
+    </footer>
+</body>
+
+</html>
