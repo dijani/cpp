@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/binary-code.png" />
+    <title>C++</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="logo" src="../images/c-logo.png">
+            <div id="txt-logo">Împreună vom învăța să programăm</div>
+        </a>
+        <img class="an" src="../images/an.png">
+        <i class="fas fa-bars menu" onclick="show()"></i>
+    </header>
+    <div class="page-box">
+        <aside id="s-menu">
+            <ul>
+                <li><a href="l1.html">Introducere</a></li>
+                <li><a href="l2.html">Date</a></li>
+                <li><a href="l3.html">Tipuri simple</a></li>
+                <li><a href="l4.html">Expresii</a></li>
+                <li><a href="l4io.html">Citire/Afisare</a></li>
+                <li><a href="l5.html">Operator de atribuire</a></li>
+                <li><a href="l6.html">Instrucțiuni de ramificare</a></li>
+                <li><a href="l7.html">Ciclu cu contor</a></li>
+                <li><a href="l8.html">Ciclu cu condiție</a></li>
+                <li><a href="l9.html">Tabele</a></li>
+                <li><a class="activ" href="l92.html">String</a></li>
+                <!-- <li><a href="l93.html">Structuri</a></li> -->
+                <!-- <li><a href="l94.html">Multimi</a></li> -->
+                <li><a href="l95.html">Fisiere</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="top7"></div>
+            <a href="#top7"><img class="up" src="../images/up.png"></a>
+            <h3>Șiruri de caractere</h3>
+            <div class="tema">
+                <div>
+                    Șir de caractere reprezintă o colecție de date caracteriale. Există 2 modalități de manipulare cu
+                    mulțimea de caractere. Primul reprezintă un tabel liniar din elemente de tip char(ceea ce presupune 
+                    operarea cu o lungime fixa - structura statică) și după ultimul caracter se află un caracter special 
+                    '\0' - numit caracter null. Lucrul cu elementele acestei modalități de structură este mai rapid, 
+                    însă nu oferă multe <a target="_blank" href="https://www.pbinfo.ro/articole/19/siruri-de-caractere-in-cpp#intlink-7">funcții</a> 
+                    încorporate pentru a manipula cu șiruri.
+                </div>
+                <div>
+                    <h4>Sintaxa șirului prin tabel:</h4>
+                    <b>char</b> numele_variabilei [lungimea];
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>char sir[5];</li>
+                    <li>Este declarat un șir din 5 caractere cu denumire <i>sir</i>, indexarea fiind de la 0 până la 4, 
+                        poziția a 5-a este ocupată de caracterul \0</li>
+                </ul>
+                <div>
+                    A doua modalitate represintă o colecție de structură <i>string</i>, ce nu presupune rezervarea dimensiunii 
+                    la declararea structurii date, astfel deja reprezintă o structură dinamică. Utilizarea acestei modalități 
+                    implică indicarea unei biblioteci speciale în program #include&#60string>. <br>
+                    Clasa String operează cu obiecte care reprezintă fluxuri de caractere. Operarea cu obiecte este mai lentă 
+                    decăt cu tabele, însă există o 
+                    <a target="_blank" href="https://cplusplus.com/reference/string/basic_string/basic_string/">serie de funcționalități</a> 
+                    asupra șirurilor de caractere, ceea ce oferă lucru mai eficient în operarea cu șiruri.
+                </div>
+                <div>
+                    <h4>Sintaxa declarației string-ului:</h4>
+                    <b>string</b> numele_variabilei;
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>string salutare;</li>
+                    <li>Este declarat un șir de caractere cu denumire salutare</li>
+                </ul>
+                <div>
+                    La citirea șirurilor de caractere trebuie să fim atenți la prezența " " (spațiului) în cadrul șirului.<br>
+                    La aplicarea comenzii <b>cin&#62&#62sir;</b> se va citi numai primul cuvânt din șir, adică până la primul 
+                    spațiu întâlnit. Dacă apare necesitate de citirea unui șir de caractere cu spații se utilizează alta comanda 
+                    pentru citire: <b>getline (cin, sir);</b> se utilizează mai des pentri string-uri și <b>cin.getline(sir,5)</b>
+                    se utilizează pentru tabele de char, specificând ca al doilea argument lungimea tabelului.
+                </div>
+                <br>
+                <div>
+                    Asupra șirurilor de caractere se admit operațiile de comparație, comparația fiind realizată caracter cu caracter 
+                    în conformitate cu codurile numerice ale caracterelor din tabelul ASCII.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>string salutare1="salut", salutare2="hello";</li>
+                    <li>cout&#60&#60salutare1&#60salutare2; </li>
+                    <li>Sunt declarate 2 șiruri cu valorile salut și hello</li>
+                    <li>Compararea acestor 2 șiruri va afișa rezultatul 0, deoarece primul caracter din primul șir "s" nu este mai mic 
+                        decât primul caracter din șirul al dolilea "h". Numărul de ordine al caracterului "s" este mai mare decât 
+                        numărul de ordine al caracterului "h".</li>
+                </ul>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Fie este dat un șir de caractere și o literă. Verificați de 
+                    câte ori litera dată apare în șirul propus.</i></b>
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>#include &#60string&#62</li>
+                        <li>using namespace std;</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>string sir;</li>
+                        <li>cout&#60&#60"Introduceti sirul:"&#60&#60endl;</li>
+                        <li>getline(cin,sir);</li>
+                        <li>char caracter;</li>
+                        <li>cout&#60&#60"Introduceti caracterul:"&#60&#60endl;</li>
+                        <li>cin&#62&#62caracter;</li>
+                        <li>int apare=0;</li>
+                        <li>for (int i = 0; i < sir.size(); i++)</li>
+                        <li>if (sir[i] == caracter) apare++;</li>
+                        <li>cout&#60&#60"Caracterul "&#60&#60caracter&#60&#60" apare de "&#60&#60apare&#60&#60" ori";</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi:<br>
+                    <p>Introduceti sirul:</p>
+                    <p>interfata</p>
+                    <p>Introduceti caracterul:</p>
+                    <p>a</p>
+                    <p>Caracterul a apare de 2 ori</p>
+                </div>
+                <br>
+                <h5>Sarcina:</h5>
+                <div>
+                    Elaborați un program ce va realiza: Într-un șir de caractere de enumerat numărul de cuvinte.<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details id="s">
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400"
+                            src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                    Mai multe probleme puteți găsi în
+                    <a target="_blank" href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a>
+                    80-84.<br>
+                    La fel puteți consulta unele probleme 
+                    <a target="_blank" href="https://infogenius.ro/probleme-siruri-de-caractere-cpp/">aici</a>.
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1337737" width="1090" height="276" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="siruri"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>Proprietar Diacova Janna © 2021</div>
+    </footer>
+</body>
+
+</html>
