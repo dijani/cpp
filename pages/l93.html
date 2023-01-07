@@ -45,21 +45,85 @@
             <h3>Structuri</h3>
             <div class="tema">
                 <div>
-                    
+                    Structurile reprezintă o colecție finită de valori neomogene. Fiecare element al structurii 
+                    este un câmp ce trebuie caracterizat prin nume și tip.
                 </div>
-                <img class="img-ex" src="">
                 <div>
                     <h4>Sintaxa declarației unei structuri este:</h4>
-                    <!-- <b>tip_componenta</b> numele_variabilei [lungimea]; -->
+                    <b>struct</b> nume_tip {<br>
+                    tip1 nume_câmp1;<br>
+                    tip2 nume_câmp2;<br>
+                    ...<br>
+                    } nume_var;
                 </div><br>
                 <h5>Exemplu:</h5>
                 <ul>
-                    <!-- <li>int tabel[5];</li>
-                    <li>Este declarat un tabel liniar cu denumire <i>tabel</i> din 5 elemente, fiecare fiind număr
-                        întreg</li> -->
+                    <li>struct elev {</li>
+                    <li>string nume, prenume;</li>
+                    <li>float note[10];</li>
+                    <li>} e1,e2;</li>
+                    <br>
+                    <li>S-a definit tipul structură cu denumire elev, ce este alcătuit din 3 câmpuri:</li>
+                    <li>2 câmpuri de tip șir de caractere cu denumirile nume și prenume </li>
+                    <li>1 câmp de tip tabel liniar cu denumire note din 10 numere reale</li>
+                    <li>după definirea structurii s-a declarat 2 variabile cu denumirile e1 și e2</li>
                 </ul>
                 <div>
-                    Pentru exemplificare propunem o problemă: <b><i></i></b>
+                    Există mai multe variații de declarație a structurilor. În sintaxa de mai sus a fost prezentată 
+                    cea mai răspândită varianta. Însă structura poate să nu conțină denumirle de variabile la sfârșit.
+                    Atunci declararea varfiabilelor se face în mod obișnuit indicând numele tipului și denumirea variabilei.
+                    De exemplu aceeași structura elev poate fi utilizată pentru declararea variabilelor mai pe urmă.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>struct elev {</li>
+                    <li>string nume, prenume;</li>
+                    <li>float note[10];</li>
+                    <li>};</li>
+                    <li>elev e1, e2;</li>
+                </ul>
+                <div>
+                    La definirea structurii poate lipsi denumirea tipului, aceasta modalitatea impune indicarea variabilelor 
+                    în mod obligatoriu și imposibilitatea declarării variabilelor în plus în textul programului mai jos.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>struct{</li>
+                    <li>string nume, prenume;</li>
+                    <li>float note[10];</li>
+                    <li>} elev;</li>
+                    <br>
+                    <li>elev în cazul dat este variabila de tip structură anonimă</li>
+                </ul>
+                <div>
+                    Referirea la câmpurile structurii se face indicând numele variabilei și numele câmpului separate prin "." .
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>elev.nume</li>
+                    <li>s-a accesat valoarea câmpului nume ale variabilei elev de tip structură</li>
+                    <br>
+                    <li>elev.note[0]</li>
+                    <li>s-a accesat valoarea câmpului note și anume a primului element al tabelului ale variabilei elev de tip structură</li>
+                </ul>
+                <div>
+                    Asupra structurilor se permite numai operația de atribuire. Aceasta se aplică numai pentru structurile de aceeași componență
+                    și realizează copierea conținutului în întregime dintr-o structură în altă.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>În prezența declarației:</li>
+                    <li>struct carte {</li>
+                    <li>string titlu;</li>
+                    <li>float pret;</li>
+                    <li>} c1,c2;</li>
+                    <br>
+                    <li>c2 = c1;</li>
+                    <li>se copie conținutul dîn structura c1 în structura c2</li>
+                </ul>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Se cunoaște o listă de 10 manuale descrise prin titlu și preț. Se cere să aflăm 
+                    câte manuale sunt mai scumpe decât 35 de lei.</i></b>
                 </div>
                 <div class="program">
                     <ul>
@@ -67,30 +131,50 @@
                         <li>using namespace std;</li>
                         <li>int main()</li>
                         <li>{</li>
-                        <li>int lumina[7], consum = 0;</li>
-                        <li>cout&#60&#60"Introduceti 7 valori zilnice ale consumului de energie electrica:"&#60&#60endl;
-                        </li>
-                        <li>for (int i = 0; i < 7; i++) {</li>
-                        <li>cin&#62&#62lumina[i];</li>
-                        <li>consum += lumina[i];</li>
+                        <li>struct carte{</li>
+                        <li>string titlu;</li>
+                        <li>float pret;</li>
+                        <li>} manuale[10];</li>
+                        <li>int n = 0;</li>
+                        <li>for (int i=0; i < 10; i++){</li>
+                        <li>cin>>manuale[i].titlu;</li>
+                        <li>cin>>manuale.pret;</li>
+                        <li>manuale.pret > 35 ? n++ : n ;</li>
                         <li>}</li>
-                        <li>cout&#60&#60"Consumul saptamanal = "&#60&#60consum&#60&#60endl;</li>
+                        <li>cout&#60&#60"Numărul manualelor mai scumpe decât 35 lei = "&#60&#60n;</li>
                         <li>return 0;</li>
                         <li>}</li>
                     </ul>
                 </div>
                 <div class="out">
                     Rezultatul execuției acestui program va fi:<br>
-                    <p>Introduceti 7 valori zilnice ale consumului de energie electrica:</p>
-                    <p>10 12 11 13 10 23 22</p>
-                    <p>Consumul saptamanal = 101</p>
+                    <p>Matematica</p>
+                    <p>34.50</p>
+                    <p>Biologia</p>
+                    <p>38.75</p>
+                    <p>Chimia</p>
+                    <p>23.00</p>
+                    <p>Fizica</p>
+                    <p>30.15</p>
+                    <p>Informatica</p>
+                    <p>25.50</p>
+                    <p>Engleza</p>
+                    <p>75.70</p>
+                    <p>Franceza</p>
+                    <p>82.35</p>
+                    <p>Istoria</p>
+                    <p>37.15</p>
+                    <p>Geografia</p>
+                    <p>28.76</p>
+                    <p>Romana</p>
+                    <p>52.37</p>
+                    <p>Numărul manualelor mai scumpe decât 35 lei = 5</p>
                 </div>
                 <br>
-                
                 <h5>Sarcina:</h5>
                 <div>
-                    Elaborați un program ce va realiza: Într-un tabel de numere întregi, lungimea căruia se citește de la tastatură, 
-                    cât și valorile acestuia de numărat de câte ori apare cifra 1.<br>
+                    Elaborați un program ce va realiza: Se dă o lista de elevi descriși prin numele, prenumele și 2 note la sem I și sem II. 
+                    Se cere de calculat și de afișat notele anuale a fiecărui elev.<br>
                     Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
                     <details id="s">
                         <summary>Deschide editorul</summary>
@@ -99,11 +183,11 @@
                     </details>
                     Mai multe probleme puteți găsi în
                     <a target="_blank"
-                        href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.52-57,
-                    64-73.
+                        href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.101-106.
                 </div>
                 <h4>Verifică cunoștințele:</h4>
-                
+                <iframe src="https://h5p.org/h5p/embed/1337992" width="1090" height="654" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="struct"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
             </div>
         </main>
     </div>
