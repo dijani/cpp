@@ -45,52 +45,65 @@
             <h3>Mulțime</h3>
             <div class="tema">
                 <div>
-                    
+                    Mulțimile (set) în limbajul C++ reprezintă un conteiner de elemente omogene unice(deja sortate). Set-ul face parte
+                    din biblioteca standată ale limbajului C++ STL (Standard Template Library), deaceea pentru a utiliza 
+                    set-ul este nevoie de adaugat biblioteca prin #include &#60set>.
                 </div>
-                <img class="img-ex" src="">
                 <div>
                     <h4>Sintaxa declarației unei mulțimi este:</h4>
-                    <!-- <b>tip_componenta</b> numele_variabilei [lungimea]; -->
+                    <b>set</b> &#60tip_element> numele_variabilei;
                 </div><br>
                 <h5>Exemplu:</h5>
                 <ul>
-                    <!-- <li>int tabel[5];</li>
-                    <li>Este declarat un tabel liniar cu denumire <i>tabel</i> din 5 elemente, fiecare fiind număr
-                        întreg</li> -->
+                    <li>set &#60int> numere;</li>
+                    <li>Este declarată o variabilă cu denumire numere de tip mulțime, inițial reprezentând mulțime vidă.</li>
                 </ul>
                 <div>
-                    Pentru exemplificare propunem o problemă: <b><i></i></b>
+                    Se poate la definirea mulțimii de inițializat mulțimea cu valorile.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>set &#60char> vocale = {'a', 'o', 'u', 'i', 'e'};</li>
+                    <li>Este declarată o variabilă cu denumire vocale de tip mulțime cu valorile de vocale de tip char.</li>
+                </ul>
+                <div>
+                    Pentru operarea eficientă cu mulțimile este nevoie de cunoscut o lista de 
+                    <a target="_blank" href="https://cplusplus.com/reference/set/set/set/">funcții</a>.
+                </div>
+                <div>
+                    Pentru exemplificare propunem o problemă: <b><i>Într-un șir de caractere de numărat numărul vocalelor.</i></b>
                 </div>
                 <div class="program">
                     <ul>
                         <li>#include &#60iostream&#62</li>
+                        <li>#include &#60set&#62</li>
+                        <li>#include &#60string&#62</li>
                         <li>using namespace std;</li>
                         <li>int main()</li>
                         <li>{</li>
-                        <li>int lumina[7], consum = 0;</li>
-                        <li>cout&#60&#60"Introduceti 7 valori zilnice ale consumului de energie electrica:"&#60&#60endl;
-                        </li>
-                        <li>for (int i = 0; i < 7; i++) {</li>
-                        <li>cin&#62&#62lumina[i];</li>
-                        <li>consum += lumina[i];</li>
+                        <li>set &#60char> vocale = {'a', 'o', 'u', 'i', 'e'};</li>
+                        <li>string sir;</li>
+                        <li>cout&#60&#60"Introduceti sir de caractere:"&#60&#60endl;</li>
+                        <li>getline(cin,sir);</li>
+                        <li>int nr_vocale=0;</li>
+                        <li>for (int i = 0; i < sir.size(); i++) {</li>
+                        <li>if (vocale.find(sir[i]) != vocale.end()) nr_vocale++;</li>
                         <li>}</li>
-                        <li>cout&#60&#60"Consumul saptamanal = "&#60&#60consum&#60&#60endl;</li>
+                        <li>cout&#60&#60"Numarul de vocale = "&#60&#60nr_vocale&#60&#60endl;</li>
                         <li>return 0;</li>
                         <li>}</li>
                     </ul>
                 </div>
                 <div class="out">
                     Rezultatul execuției acestui program va fi:<br>
-                    <p>Introduceti 7 valori zilnice ale consumului de energie electrica:</p>
-                    <p>10 12 11 13 10 23 22</p>
-                    <p>Consumul saptamanal = 101</p>
+                    <p>Introduceti sir de caractere:</p>
+                    <p>cautam vocalele</p>
+                    <p>Numarul de vocale = 7</p>
                 </div>
                 <br>
-                
                 <h5>Sarcina:</h5>
                 <div>
-                    Elaborați un program ce va realiza: Într-un tabel de numere întregi, lungimea căruia se citește de la tastatură, 
-                    cât și valorile acestuia de numărat de câte ori apare cifra 1.<br>
+                    Elaborați un program ce va realiza: Într-un șir de caractere de numărat numărul de litere, cifre și semne de punctuație.<br>
                     Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
                     <details id="s">
                         <summary>Deschide editorul</summary>
@@ -99,11 +112,11 @@
                     </details>
                     Mai multe probleme puteți găsi în
                     <a target="_blank"
-                        href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.52-57,
-                    64-73.
+                        href="https://liceudonici.do.am/Turbo_Pascal-Culegere_de_probleme.pdf">Problemar</a> pag.94-95.
                 </div>
                 <h4>Verifică cunoștințele:</h4>
-                
+                <iframe src="https://h5p.org/h5p/embed/1338272" width="1090" height="315" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="set"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
             </div>
         </main>
     </div>
