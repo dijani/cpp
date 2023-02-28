@@ -42,10 +42,10 @@ header a {
 
 .an{
     position: fixed;
-    width: 10%;
+    width: 8%;
     rotate: 25deg;
-    top: -25px;
-    right: -65px;
+    top: -40px;
+    right: -35px;
 }
 
 .menu {
@@ -189,8 +189,8 @@ h5 {
     .an{
         position: fixed;
         width: 25%;
-        top: -15px;
-        right: -30px;
+        top: -27px;
+        right: -32px;
     }
 
     .page-box {
