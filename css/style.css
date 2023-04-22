@@ -91,7 +91,7 @@ main {
 }
 
 footer {
-    height: 20px;
+    height: 82px;
     background-color: #7e8896;
     color: white;
     text-align: center;
@@ -100,6 +100,14 @@ footer {
     position: relative;
     margin-bottom: 0px;
     z-index: 1;
+}
+
+.elfsight-app-3db3a8ee-332c-4d49-867b-2c28b10e0998 {
+    float:right;
+}
+
+.elfsight-app-3db3a8ee-332c-4d49-867b-2c28b10e0998 a{
+    display: none;
 }
 
 .up {
@@ -233,5 +241,15 @@ h5 {
 
     .img-ex {
         width: 95%;
+    }
+
+    footer {
+        height: 102px;
+    }
+
+    .elfsight-app-3db3a8ee-332c-4d49-867b-2c28b10e0998 {
+        float:none;
+        position: absolute;
+        top: 20px;
     }
 }
