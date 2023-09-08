@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script src="../js/main.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../images/binary-code.png" />
+    <title>C++</title>
+</head>
+
+<body>
+    <header>
+        <a href="../index.html">
+            <img id="logo" src="../images/c-logo.png">
+            <div id="txt-logo">Împreună vom învăța să programăm</div>
+        </a>
+        <img class="an" src="../images/an.png">
+        <i class="fas fa-bars menu" onclick="show()"></i>
+    </header>
+    <div class="page-box">
+        <aside id="s-menu">
+            <ul>
+                <li><a href="l1.html">Introducere</a></li>
+                <li><a href="l2.html">Date</a></li>
+                <li><a href="l3.html">Tipuri simple</a></li>
+                <li><a href="l4.html">Expresii</a></li>
+                <li><a href="l4io.html">Citire/Afișare</a></li>
+                <li><a href="l5.html">Operator de atribuire</a></li>
+                <li><a href="l6.html">Instrucțiuni de ramificare</a></li>
+                <li><a href="l7.html">Ciclu cu contor</a></li>
+                <li><a href="l8.html">Ciclu cu condiție</a></li>
+                <li><a href="l9.html">Tabele</a></li>
+                <li><a href="l92.html">String</a></li>
+                <li><a href="l93.html">Structuri</a></li>
+                <li><a href="l94.html">Mulțimi</a></li>
+                <li><a href="l95.html">Fișiere</a></li>
+                <li><a class="activ" href="l96.html">Funcții</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div id="top7"></div>
+            <a href="#top7"><img class="up" src="../images/up.png"></a>
+            <h3>Funcții</h3>
+            <div class="tema">
+                <div>
+                    Orice problema poate fi divizată în subprobleme mici. Astfel orice program poate fi compus din mai
+                    multe subprograme. Subprogram reprezintă un fragment al programului, care deja se numește program
+                    principal. Utilizarea subprogramelor face textul programului mai scurt și mai ușor de conceput. Un
+                    avantaj al subprogramelor constă în faptul că odată definit el poate fi utilizat de număr dorit de
+                    ori (apel de subprogram). În limbajul C++ subprogramele sunt reprezentate sub forma de funcții.
+                </div>
+                <br>
+                <div>
+                    Cu o funcție main noi deja suntem cunoscuți. Ea reprezinta blocul principal al programului in C++.
+                    În afară de aceasta noi putem defini funcții proprii. Orice funcție trebuie definită înainte de
+                    blocul funcției main, cu o structură asemănătoarea cu main.
+                </div>
+                <div>
+                    <h4>Sintaxa declarației de funcție este:</h4>
+                    <ul>
+                        <li>tip_rezultat nume_functie(parametrii_formali) {</li>
+                        <li><i>corpul funcției</i></li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>int suma (int a, int b) {</li>
+                    <li>return a+b;</li>
+                    <li>}</li>
+                    <br>
+                    <li>se definește o funcție cu numele <i>suma</i> cu 2 parametri formali întregi <i>a</i> și <i>b</i>
+                        (argumentele funcției), rezultatul funcției este de tip întreg</li>
+                    <li>în corpul funcției se realizează operația de adunare și rezultatul se întoarce în main prin
+                        operatorul return</li>
+                </ul>
+                <div>
+                    După ce funcția este definită in blocul main ea trebuie chemată pentru execuția (apelarea funcției).
+                    Funcția se apelează utilizând numele ei și parametrii actuali (valorile concrete ce se transmit la
+                    funcția).
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>int suma (int a, int b) {</li>
+                    <li>return a+b;</li>
+                    <li>}</li>
+                    <li>int main() {</li>
+                    <li>int x,y;</li>
+                    <li>cout&#60&#60"Introdu 2 valori intregi:"&#60&#60endl;</li>
+                    <li>cin&#62&#62x&#62&#62y;</li>
+                    <li>cout&#60&#60"Suma acestor numere este:"&#60&#60suma(x,y);</li>
+                    <li>return 0;</li>
+                    <li>}</li>
+                    <br>
+                    <li>după definirea funcției înainte de blocul main, ea este chemată în operatorul cout</li>
+                    <li>apelul este compus din numele funcției <i>suma</i> și 2 parametri actuali <i>x</i> și <i>y</i>
+                    </li>
+                </ul>
+                <h5>Remarcă</h5>
+                <div>
+                    Funcțiile des sunt utilizate pentru a realiza calcule și obținerea unui rezultat ce trebuie întors
+                    în blocul main.<br>
+                    Însă este posibil să definim o funcție ce nu realizează calcule și nu întoarce nici un rezultat în
+                    blocul main.
+                    Astfel de funcții la tipul rezultatului au tipul void.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>void salutare (string s) {</li>
+                    <li>cout&#60&#60"Salut, " + s;</li>
+                    <li>}</li>
+                    <br>
+                    <li>se definește o funcție cu numele <i>salutare</i> cu 1 parametru formal de tip șir de caractre
+                        <i>s</i>
+                        (argumentul funcției), care nu returnează nimic (void)</li>
+                    <li>în corpul funcției se utilizează operatorul cout ce afișează rezultatul concatenării a 2 șiruri:
+                        Salut, și
+                        valoarea argimentului <i>s</i></li>
+                </ul>
+                <div>
+                    Apelul astfel de funcții puțin se deferă de apelul funcției cu rezultat.
+                </div>
+                <h5>Exemplu:</h5>
+                <ul>
+                    <li>void salutare (string s) {</li>
+                    <li>cout&#60&#60"Salut, " + s;</li>
+                    <li>}</li>
+                    <li>int main() {</li>
+                    <li>salutare("Maria");</li>
+                    <li>return 0;</li>
+                    <li>}</li>
+                    <br>
+                    <li>după definirea funcției înainte de blocul main, funcția salutare este chemată cu parametrul
+                        actual
+                        <i>Maria</i> ca instrucțiunea independentă
+                    </li>
+                </ul>
+                <h5>Remarcă</h5>
+                <div>
+                    Un material util despre funcții puteți gasi pe următorul
+                    <a target="_blank" href="https://cplusplus.com/doc/tutorial-ro/functions/">link</a>.
+                </div>
+                <br>
+                <div>
+                    În continuare este prezentat un exemplu de program cu câteva funcții.
+                </div>
+                <div class="program">
+                    <ul>
+                        <li>#include &#60iostream&#62</li>
+                        <li>using namespace std;</li>
+                        <li>bool min(int a, int b){</li>
+                        <li> return a &#60 b; </li>
+                        <li>}</li>
+                        <li>void salutare() {</li>
+                        <li>cout&#60&#60"Salut, prietene!"&#60&#60endl;</li>
+                        <li>}</li>
+                        <li>int main()</li>
+                        <li>{</li>
+                        <li>salutare();</li>
+                        <li>int x,y;</li>
+                        <li>cout&#60&#60"Introdu 2 numere întregi=>"&#60&#60endl;</li>
+                        <li>cin&#62&#62x&#62&#62y;</li>
+                        <li>bool b = min(x,y);</li>
+                        <li>cout&#60&#60"Primul numar e mai mic decat al doilea? "&#60&#60b;</li>
+                        <li>return 0;</li>
+                        <li>}</li>
+                    </ul>
+                </div>
+                <div class="out">
+                    Rezultatul execuției acestui program va fi următorul:<br>
+                    <p>Salut, prietene!</p>
+                    <p>Introdu 2 numere întregi</p>
+                    <p>3 4</p>
+                    <p>Primul numar e mai mic decat al doilea? 1</p>
+                </div>
+                <br>
+                <h5>Sarcina:</h5>
+                <div>
+                    Elaborați un program ce va realiza: utilizând o funcție ce calculează numărul cifrelor dintr-un
+                    număr întreg verificați care număr din 2 numere citite de la tastatură este mai "lung".<br>
+                    Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
+                    <details id="s">
+                        <summary>Deschide editorul</summary>
+                        <iframe width="100%" height="400"
+                            src="https://www.programiz.com/cpp-programming/online-compiler/"></iframe>
+                    </details>
+                </div>
+                <h4>Verifică cunoștințele:</h4>
+                <iframe src="https://h5p.org/h5p/embed/1430531" width="1091" height="351" frameborder="0" allowfullscreen="allowfullscreen" allow="geolocation *; microphone *; camera *; midi *; encrypted-media *" title="functii"></iframe>
+                <script src="https://h5p.org/sites/all/modules/h5p/library/js/h5p-resizer.js" charset="UTF-8"></script>
+                <br><br>
+                <div>
+                    Un set de probleme pentru antrenament poate fi preluat din 
+                    <a target="_blank" href="https://ceef.md/upload/publicatii/Culegere%20de%20probleme.pdf">Culegere de probleme</a> 
+                    la paginile 44-49.
+                </div>
+                <h3>Funcții recursive</h3>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div>Proprietar Diacova Janna © 2021</div>
+    </footer>
+</body>
+
+</html>
