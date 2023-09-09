@@ -47,16 +47,17 @@
             <div class="tema">
                 <div>
                     Orice problema poate fi divizată în subprobleme mici. Astfel orice program poate fi compus din mai
-                    multe subprograme. Subprogram reprezintă un fragment al programului, care deja se numește program
-                    principal. Utilizarea subprogramelor face textul programului mai scurt și mai ușor de conceput. Un
-                    avantaj al subprogramelor constă în faptul că odată definit el poate fi utilizat de număr dorit de
+                    multe subprograme. Subprogram reprezintă un fragment al programului (program principal). 
+                    Utilizarea subprogramelor face textul programului mai scurt și mai ușor de conceput. Un
+                    avantaj al subprogramelor constă în faptul că o dată definit el poate fi utilizat de număr dorit de
                     ori (apel de subprogram). În limbajul C++ subprogramele sunt reprezentate sub forma de funcții.
                 </div>
                 <br>
                 <div>
-                    Cu o funcție main noi deja suntem cunoscuți. Ea reprezinta blocul principal al programului in C++.
+                    Cu o funcție main noi deja suntem cunoscuți. Ea reprezintă blocul principal al programului în C++.
                     În afară de aceasta noi putem defini funcții proprii. Orice funcție trebuie definită înainte de
-                    blocul funcției main, cu o structură asemănătoarea cu main.
+                    blocul funcției main (există posibilitatea de definire și mai jos de blocul main), cu o structură 
+                    asemănătoarea cu main: antetul funcției(prima linie) și corpul ei.
                 </div>
                 <div>
                     <h4>Sintaxa declarației de funcție este:</h4>
@@ -78,7 +79,7 @@
                         operatorul return</li>
                 </ul>
                 <div>
-                    După ce funcția este definită in blocul main ea trebuie chemată pentru execuția (apelarea funcției).
+                    După ce funcția este definită în blocul main, ea trebuie chemată pentru execuția (apelarea funcției).
                     Funcția se apelează utilizând numele ei și parametrii actuali (valorile concrete ce se transmit la
                     funcția).
                 </div>
@@ -101,11 +102,10 @@
                 </ul>
                 <h5>Remarcă</h5>
                 <div>
-                    Funcțiile des sunt utilizate pentru a realiza calcule și obținerea unui rezultat ce trebuie întors
+                    Funcțiile des sunt utilizate pentru realizarea calculelor și obținerea unui rezultat ce trebuie întors
                     în blocul main.<br>
                     Însă este posibil să definim o funcție ce nu realizează calcule și nu întoarce nici un rezultat în
-                    blocul main.
-                    Astfel de funcții la tipul rezultatului au tipul void.
+                    blocul main. Astfel de funcții la tipul rezultatului au tipul void.
                 </div>
                 <h5>Exemplu:</h5>
                 <ul>
@@ -114,14 +114,12 @@
                     <li>}</li>
                     <br>
                     <li>se definește o funcție cu numele <i>salutare</i> cu 1 parametru formal de tip șir de caractre
-                        <i>s</i>
-                        (argumentul funcției), care nu returnează nimic (void)</li>
+                        <i>s</i> (argumentul funcției), care nu returnează nimic (void)</li>
                     <li>în corpul funcției se utilizează operatorul cout ce afișează rezultatul concatenării a 2 șiruri:
-                        Salut, și
-                        valoarea argimentului <i>s</i></li>
+                        Salut, și valoarea argumentului <i>s</i></li>
                 </ul>
                 <div>
-                    Apelul astfel de funcții puțin se deferă de apelul funcției cu rezultat.
+                    Apelul astfel de funcții se deferă de apelul funcției cu rezultat.
                 </div>
                 <h5>Exemplu:</h5>
                 <ul>
@@ -134,13 +132,12 @@
                     <li>}</li>
                     <br>
                     <li>după definirea funcției înainte de blocul main, funcția salutare este chemată cu parametrul
-                        actual
-                        <i>Maria</i> ca instrucțiunea independentă
+                        actual <i>Maria</i> ca instrucțiunea independentă
                     </li>
                 </ul>
                 <h5>Remarcă</h5>
                 <div>
-                    Un material util despre funcții puteți gasi pe următorul
+                    Un material util despre funcții puteți găsi pe următorul
                     <a target="_blank" href="https://cplusplus.com/doc/tutorial-ro/functions/">link</a>.
                 </div>
                 <br>
@@ -179,7 +176,7 @@
                 <br>
                 <h5>Sarcina:</h5>
                 <div>
-                    Elaborați un program ce va realiza: utilizând o funcție ce calculează numărul cifrelor dintr-un
+                    Elaborați un program: utilizând o funcție ce calculează numărul cifrelor dintr-un
                     număr întreg verificați care număr din 2 numere citite de la tastatură este mai "lung".<br>
                     Pentru realizarea sarcinii puteți utiliza zona de mai jos a editorului.
                     <details id="s">

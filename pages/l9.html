@@ -48,17 +48,13 @@
                 <div>
                     În viața cotidiană cel mai des ne întâlnim cu situații în care apare necesitatea de prelucrare nu
                     unei singure valori ci a mai multor valori ce reprezintă o colecție de date. În majoritatea
-                    cazurilor
-                    datele sunt omogene și finite la număr.<br>
+                    cazurilor datele sunt omogene și finite la număr.<br>
                     În așa cazuri utilizăm tipuri structurate de date și cel mai des acestea sunt <b>tabele</b>. Există
                     mai multe variante de această structură: tabel liniar (vector, unidimensional), tabel dreptunghic
-                    (matrice,
-                    bidimensional), tabel n-dimensional.<br>
+                    (matrice, bidimensional), tabel n-dimensional.<br>
                     Vom studia mai detaliat tabel liniar. Structura dată operează cu o colecție de date (mai multe
-                    valori) care
-                    sunt grupate sub un nume, fiecare valoare fiind indexată (are o poziție) după care poate fi ușor
-                    identificată
-                    și accesată după necesitate.
+                    valori) care sunt grupate sub un nume, fiecare valoare fiind indexată (are o poziție) după care poate 
+                    fi ușor identificată și accesată după necesitate.
                 </div>
                 <img class="img-ex" src="../images/tabel1.png">
                 <div>
@@ -80,21 +76,35 @@
                         caracter</li>
                 </ul>
                 <div>
+                    Accesarea unei componente ale unui tabel liniar se face prin indicarea numelui tabelului și indicelui 
+                    componentei încadrat în paranteze patrate.<br>
+                    nume_var[indice]<br>
+                    Notația <b>tabel[3]</b> - reprezintă accesare(apelarea) componentei a 4-a (indexarea se începe de la 0) 
+                    al structurii tabel.
+                </div>
+                <div>
                     <h4>Sintaxa declarației unui tabel dreptunghic este:</h4>
                     <b>tip_componenta</b> numele_variabilei [nr_rânduri][nr_coloane];
-                </div><br>
+                </div>
                 <h5>Exemplu:</h5>
                 <ul>
                     <li>int energie[4][7];</li>
                     <li>Este declarat un tabel dreptunghic cu denumire <i>energie</i> din 28 elemente (organizate în 4
-                        rânduri
-                        și 7 coloane), fiecare fiind număr întreg</li>
+                        rânduri și 7 coloane), fiecare fiind număr întreg</li>
                 </ul>
+                <div>
+                    Accesarea unei componente ale unui tabel dreptunghic se face prin indicarea numelui tabelului și indicelor
+                    rîndului și coloanei a unei componentei încadrate în paranteze patrate separate.<br>
+                    nume_var[indice_rând][indice_coloana]<br>
+                    Notația <b>energie[1][0]</b> - reprezintă accesare(apelarea) componentei tabelului energie ce se află pe 
+                    rândul 2 și prima coloană.
+                </div>
+                <br>
                 <div>
                     Structura poate fi completată cu valori în mai multe moduri.<br>
                     Prima variantă reprezintă chiar completarea structurii cu valori în momentul declarării, ceea ce se
-                    numește
-                    declararea cu inițializarea.
+                    numește declararea cu inițializarea. <br>
+                    Analizați imaginea propusă.
                 </div>
                 <img class="img-ex"
                     src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/Array-Declaration-In-C.png">
