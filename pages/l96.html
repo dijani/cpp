@@ -195,6 +195,99 @@
                     la paginile 44-49.
                 </div>
                 <h3>Funcții recursive</h3>
+                <div>
+                    Pentru înțelegerea mai bună a recursiei este nevoie să facem cunoștință cu <i>vizibilitatea 
+                    declarației</i> și noțiunile de <i>variabila locala</i> vs <i>variabila globală</i>.
+                    <br>
+                    Variabila locală se declară și se utilizează în interiorul blocului unei funcții. Pe când 
+                    variabila globală se declară în afară blocului unei funcții, dar poate fi utilizată în toate 
+                    blocurile de funcții descrise mai jos. Astfel variabila locală este vizibilă deaceea poate fi 
+                    utilizată numai în blocul unde este declarată. Dar variabila globală este vizibilă peste tot 
+                    ceea ce permite utilizarea ei în alte blocurile ale funcțiilor.
+                </div>
+                <h5>Remarcă</h5>
+                <div>
+                    Deoarece variabila globală este vizibilă peste tot și poate fi utilizată în blocurile altor funcții,
+                    înseamnă că în blocurile respective valoarea variabilei globale poate fi modificată. Acest lucru nu 
+                    întotdeauna este benefic, efectul negativ al acestei modificări se numește efectul colateral(secundar).
+                    <br>
+                    <b>Recomandarea:</b> Comunicarea cu subprograme la nivel de argumente realizați utilizând parametrii, 
+                    ceea ce permite modularea programului sau utilizarea lui universală.
+                </div>
+                <br>
+                <div>
+                    La definirea funcțiilor numele ei fiind declarația cu tip void sau tip specific rezultatului este vizibilă
+                    în blocul funcției respective, ceea ce permite apelarea funcției date nu numai în blocul altei funcții dar 
+                    și în blocul curent. Aceasta situație și se numește <b>recursia</b>: apelarea funcției în interiorul 
+                    blocul său sau autoapelarea funcției.
+                </div>
+                <div>
+                    Conceptul recursivității poate fi explicat astfel: Recursia este proprietatea unui obiect de a se defini prin el însuși.
+                    Conceptul dat ușor se înțelege vizual. Pentru vizualizarea recursivității să privim obiecte de 
+                    <a target="_blank" href="https://recursivitate.webnode.ro/arte/desen/">artă</a>.
+                </div>
+                <br>
+                <div>
+                    Pentru elaborarea unei funcții recursive este nevoie de exprimat recursia prin 2 cazuri: cazul elementar și cazul de recurență. 
+                    Cazul elementar reprezintă o valoare cunoscută ce indică condiția de terminare a procesului de recursie. 
+                    Cazul de recurență reprezintă autoapelul care neapărat trebuie să rezulte spre cazul elementar, adică spre valoarea inițială 
+                    (condiția de terminare a recursiei). Aceste 2 cazuri sunt definite într-o instrucțiunea condițională IF.
+                </div>
+                <h5>Exemplu cu funcția recursivă de tip void:</h5>
+                <div>
+                    Afișarea numerelor în descreștere.
+                </div>
+                <ul>
+                    <li>void afis (int n) {</li>
+                    <li>if (n == 0) return;</li>
+                    <li>else {</li>
+                    <li>cout&#60&#60n&#60&#60' ';</li>
+                    <li>afis(n-1);</li>
+                    <li>}</li>
+                    <li>}</li>
+                    <li>int main() {</li>
+                    <li>afis(5);</li>
+                    <li>return 0;</li>
+                    <li>}</li>
+                    <br>
+                    <li>În rezultatul execuției programului dat se vor afișa numerele: 5 4 3 2 1</li>
+                </ul>
+                <h5>Exemplu cu funcția recursivă de tip int:</h5>
+                <div>
+                    Calculul sumei cifrelor dintr-un număr.
+                </div>
+                <ul>
+                    <li>int sumcifre (int n) {</li>
+                    <li>if (n == 0) return 0;</li>
+                    <li>else return sumcifre(n / 10) + n % 10;</li>
+                    <li>}</li>
+                    <li>int main() {</li>
+                    <li>cout&#60&#60"Suma cifrelor = "&#60&#60sumcifre(123);</li>
+                    <li>return 0;</li>
+                    <li>}</li>
+                    <br>
+                    <li>În rezultatul execuției programului dat se va afișa: Suma cifrelor = 6</li>
+                </ul>
+                <div>
+                    La programarea recursivă se cunoaște recursia directă și indirectă. 
+                    Ceea ce a fost prezentat mai sus reprezintă recursii directe. 
+                    Recursia indirectă presupune autoapelarea funcțiilor prin intermediul altor funcții.
+                </div>
+                <h5>Sintaxa schematică recursiei indirecte este:</h5>
+                <ul>
+                    <li>tip b(parametrii_formali) {</li>
+                    <li>...</li>
+                    <li>a(parametrii_actuali);   // funcția b apelează funcția a</li>
+                    <li>...</li>
+                    <li>}</li>
+                    <li>tip a(parametrii_formali) {    // funcția a este recursivă, apelează funcția b care apelează pe funcția a</li>
+                    <li>...</li>
+                    <li>if (conditie)</li>
+                    <li>...</li>
+                    <li>b(parametrii_actuali);</li>
+                    <li>...</li>
+                    <li>}</li>
+                </ul>
             </div>
         </main>
     </div>
